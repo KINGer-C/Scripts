@@ -23,7 +23,7 @@ mkdir ~/.dapscoin
 cd ~/.dapscoin
 vi dapscoin.conf
 cd /usr/local/bin 
-dapscoind -daemon
+./dapscoind -daemon
 echo "Adding nodes"
 ./dapscoin-cli addnode 46.163.196.103:53572 add 
 ./dapscoin-cli addnode 212.47.244.107:53572 add
