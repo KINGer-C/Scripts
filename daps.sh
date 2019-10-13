@@ -25,6 +25,7 @@ vi dapscoin.conf
 cd /usr/local/bin 
 ./dapscoind -daemon
 echo "Adding nodes"
+cd /usr/local/bin 
 ./dapscoin-cli addnode 46.163.196.103:53572 add 
 ./dapscoin-cli addnode 212.47.244.107:53572 add
 ./dapscoin-cli addnode 139.180.173.111:53572 add
