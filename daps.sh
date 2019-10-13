@@ -21,20 +21,7 @@ chmod +x /usr/local/bin/dapscoin-qt
 echo "Creating .dapscoin directory..."
 mkdir ~/.dapscoin
 cd ~/.dapscoin
-touch dapscoin.conf
-echo "Editing dapscoin.conf..."
-echo "Configuring the dapscoin.conf"
-echo "rpcuser=$(pwgen -s 16 1)" > dapscoin.conf
-echo "rpcpassword=$(pwgen -s 64 1)" >> dapscoin.conf
-echo "rpcallowip=127.0.0.1" >> dapscoin.conf
-echo "server=1" >> dapscoin.conf
-echo "daemon=1" >> dapscoin.conf
-echo "listen=1" >> dapscoin.conf
-echo "maxconnections=64" >> dapscoin.conf
-echo "masternode=1" >> dapscoin.conf
-echo "masternodeaddr=$ipaddr:53572 >> dapscoin.conf
-echo "masternodeprivkey=$mnkey" >> dapscoin.conf
-echo "Launching dapscoind..."
+vi dapscoin.conf
 cd /usr/local/bin 
 dapscoind -daemon
 echo "Adding nodes"
