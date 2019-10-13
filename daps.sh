@@ -21,6 +21,7 @@ chmod +x /usr/local/bin/dapscoin-qt
 echo "Creating .dapscoin directory..."
 mkdir ~/.dapscoin
 cd ~/.dapscoin
+touch dapscoin.conf
 echo "Editing dapscoin.conf..."
 echo "Configuring the dapscoin.conf"
 echo "rpcuser=$(pwgen -s 16 1)" > dapscoin.conf
