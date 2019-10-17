@@ -31,7 +31,7 @@ echo "Done!"
 echo "Running dapscoind..."
 sleep 5s 
 cd /usr/local/bin 
-./dapscoind -daemon
+./dapscoind -reindex
 sleep 5s 
 cd /usr/local/bin 
 ./dapscoin-cli addnode 95.179.254.185:53572 add
