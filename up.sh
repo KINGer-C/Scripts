@@ -31,6 +31,11 @@ echo "Done!"
 echo "Running dapscoind..."
 sleep 5s 
 cd /usr/local/bin && ./dapscoind -daemon
-echo "Update completed!"
 sleep 5s 
+cd /usr/local/bin && ./dapscoin-cli addnode 95.179.254.185:53572 add
+cd /usr/local/bin && ./dapscoin-cli addnode 45.63.40.9:53572 add
+cd /usr/local/bin && ./dapscoin-cli addnode 51.15.121.253:53572 add
+cd /usr/local/bin && ./dapscoin-cli addnode [2804:14d:c880:83a9:9d2e:9e10:5462:33c9]:53572 add
+echo "Update completed!"
+sleep 1s 
 cd /usr/local/bin && watch ./dapscoin-cli getinfo
