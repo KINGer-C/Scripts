@@ -29,8 +29,8 @@ cd /usr/local/bin
 sudo chmod +x /usr/local/bin/daps*
 echo "Done!"
 echo "Running dapscoind..."
-sleep 3s 
+sleep 5s 
 cd /usr/local/bin && ./dapscoind -daemon
 echo "Update completed!"
-sleep 3s 
+sleep 5s 
 cd /usr/local/bin && ./dapscoin-cli getinfo
