@@ -1,5 +1,6 @@
 echo "Stopping dapscoind..."
 cd /usr/local/bin && dapscoin-cli stop
+sleep 2s 
 cd /usr/local/bin 
 echo "Removing old files..."
 cd /usr/local/bin && rm -rf master_linux-v1.0.2.tar
@@ -28,6 +29,8 @@ cd /usr/local/bin
 sudo chmod +x /usr/local/bin/daps*
 echo "Done!"
 echo "Running dapscoind..."
-sleep 3 ; cd /usr/local/bin && ./dapscoind -daemon
+sleep 3s 
+cd /usr/local/bin && ./dapscoind -daemon
 echo "Update completed!"
-sleep 3 ; cd /usr/local/bin && ./dapscoin-cli getinfo
+sleep 3s 
+cd /usr/local/bin && ./dapscoin-cli getinfo
