@@ -16,5 +16,7 @@ rm -rf master_linux-v1.0.2.tar
 echo "Set permissions on files..."
 sudo chmod +x /usr/local/bin/daps*
 echo "Running dapscoind..."
-dapscoind -daemon
+./dapscoind -daemon
 echo "Update completed!"
+cd /usr/local/bin 
+./dapscoin-cli getinfo
