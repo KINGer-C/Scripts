@@ -7,7 +7,7 @@ echo "Deleting blocks"
 echo "downloading new blocks"
 cd /root/.dapscoin
 wget https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
-sudo unzip -jo bootstrap.zip 
+sudo unzip -jo bootstrap.zip -d /root/.dapscoin/blocks
 cd /root/.dapscoin
 rm -rf bootstrap.zip 
 echo "done!"
