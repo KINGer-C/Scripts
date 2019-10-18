@@ -58,7 +58,6 @@ echo "masternode.conf Deleted!"
 cd ~/.dapscoin && rm -rf wallet.dat
 echo "wallet.dat Deleted!"
 sleep 5s
-echo "downloading new blocks"
 cd /usr/local/bin && ./dapscoind -daemon
 sleep 5s
 cd /usr/local/bin && ./dapscoin-cli addnode 185.170.114.123:53572 add
