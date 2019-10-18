@@ -13,19 +13,19 @@ cd /usr/local/bin && rm -rf dapscoin-qt
 cd /usr/local/bin && rm -rf dapscoin dapscoin-poa-minerd
 cd /usr/local/bin && rm -rf dapscoin-tx
 echo "Deleting blocks"
-cd /root/.dapscoin && rm -rf /root/.dapscoin/blocks 
-cd /root/.dapscoin && rm -rf /root/.dapscoin/chainstate 
-cd /root/.dapscoin && rm -rf /root /.dapscoin/database 
-cd /root/.dapscoin && rm -rf /root/.dapscoin/peers.dat
-cd /root/.dapscoin && rm -rf /root/.dapscoin/backups
-cd /root/.dapscoin && rm -rf /root/.dapscoin/.lock
-cd /root/.dapscoin && rm -rf /root/.dapscoin/banlist.dat
-cd /root/.dapscoin && rm -rf /root/.dapscoin/budget.dat
-cd /root/.dapscoin && rm -rf /root/.dapscoin/db.log
-cd /root/.dapscoin && rm -rf /root/.dapscoin/debug.log
-cd /root/.dapscoin && rm -rf /root/.dapscoin/fee_estimates.dat
-cd /root/.dapscoin && rm -rf /root/.dapscoin/mncache.dat
-cd /root/.dapscoin && rm -rf /root/.dapscoin/mnpayments.dat
+cd /root/.dapscoin && rm -rf /blocks 
+cd /root/.dapscoin && rm -rf chainstate 
+cd /root/.dapscoin && rm -rf database 
+cd /root/.dapscoin && rm -rf peers.dat
+cd /root/.dapscoin && rm -rf backups
+cd /root/.dapscoin && rm -rf .lock
+cd /root/.dapscoin && rm -rf banlist.dat
+cd /root/.dapscoin && rm -rf budget.dat
+cd /root/.dapscoin && rm -rf db.log
+cd /root/.dapscoin && rm -rf debug.log
+cd /root/.dapscoin && rm -rf fee_estimates.dat
+cd /root/.dapscoin && rm -rf mncache.dat
+cd /root/.dapscoin && rm -rf mnpayments.dat
 echo "Done!"
 echo "Downloading update..."
 cd /usr/local/bin && wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.2/master_linux-v1.0.2.tar
