@@ -9,41 +9,32 @@ sudo ufw allow ssh
 sudo ufw allow 53572
 sudo ufw allow 53573
 sudo ufw enable
-echo "Downloading latest build..."
-wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.1/master_linux-v1.0.1.3.zip
-echo "Installing unzip..."
-sudo apt-get install unzip -y
-echo "Unzipping dapscoin_linux-v1.0.3.zip..."
-sudo unzip master_linux-v1.0.1.3.zip -d /usr/local/bin
-chmod +x /usr/local/bin/dapscoind
-chmod +x /usr/local/bin/dapscoin-cli
-chmod +x /usr/local/bin/dapscoin-qt
+echo "Downloading update..."
+cd /usr/local/bin && wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.2/master_linux-v1.0.2.tar
+echo "Done!"
+echo "Extracting update..."
+cd /usr/local/bin && sudo tar -xvf master_linux-v1.0.2.tar
+echo "Done!"
+echo "Removing old files..."
+cd /usr/local/bin && rm -rf master_linux-v1.0.2.tar
+echo "Done!"
+echo "Set permissions on files..."
+cd /usr/local/bin && sudo chmod 777 daps*
+sleep 2s 
 echo "Creating .dapscoin directory..."
 mkdir ~/.dapscoin
 cd ~/.dapscoin
 vi dapscoin.conf
 cd /usr/local/bin 
+echo "Stopping dapscoind..."
+dapscoin-cli stop
+echo "Downloading bootstrap..."
+wget https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
+echo "Removing old blocks, chainstate, and database folders...."
+rm -rf ~/.dapscoin/blocks ~/.dapscoin/chainstate ~/.dapscoin/database
+echo "Installing new blocks folders..."
+unzip bootstrap.zip -d ~/.dapscoin
+echo "Bootstrap installed!"
 ./dapscoind -daemon
 echo "Adding nodes"
-cd /usr/local/bin 
-./dapscoin-cli addnode 46.163.196.103:53572 add 
-./dapscoin-cli addnode 212.47.244.107:53572 add
-./dapscoin-cli addnode 139.180.173.111:53572 add
-./dapscoin-cli addnode 34.66.72.132:53572 add
-./dapscoin-cli addnode 104.196.231.205:53572 add
-./dapscoin-cli addnode 35.192.110.163:53572 add
-./dapscoin-cli addnode 35.225.119.166:53572 add
-./dapscoin-cli addnode 34.69.121.145:53572 add
-./dapscoin-cli addnode 35.194.2.105:53572 add
-./dapscoin-cli addnode 34.82.214.16:53572 add
-./dapscoin-cli addnode 34.83.218.180:53572 add
-./dapscoin-cli addnode 209.250.232.169:53572 add
-./dapscoin-cli addnode 91.211.250.14:53572 add
-./dapscoin-cli addnode 173.249.51.221:53572 add
-./dapscoin-cli addnode 139.180.173.111:53572 add
-./dapscoin-cli addnode 51.91.109.193:53572 add
-./dapscoin-cli addnode 45.32.71.21:53572 add
-./dapscoin-cli addnode 45.32.71.21:53572 add
-./dapscoin-cli addnode 123.1.96.107:53572 add
-echo "Success"
 watch ./dapscoin-cli getinfo
