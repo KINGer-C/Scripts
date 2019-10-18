@@ -12,6 +12,20 @@ cd /usr/local/bin && rm -rf dapscoind
 cd /usr/local/bin && rm -rf dapscoin-qt
 cd /usr/local/bin && rm -rf dapscoin dapscoin-poa-minerd
 cd /usr/local/bin && rm -rf dapscoin-tx
+echo "Deleting blocks"
+cd /root/.dapscoin && rm -rf /root/.dapscoin/blocks 
+cd /root/.dapscoin && rm -rf /root/.dapscoin/chainstate 
+cd /root/.dapscoin && rm -rf /root /.dapscoin/database 
+cd /root/.dapscoin && rm -rf /root/.dapscoin/peers.dat
+cd /root/.dapscoin && rm -rf /root/.dapscoin/backups
+cd /root/.dapscoin && rm -rf /root/.dapscoin/.lock
+cd /root/.dapscoin && rm -rf /root/.dapscoin/banlist.dat
+cd /root/.dapscoin && rm -rf /root/.dapscoin/budget.dat
+cd /root/.dapscoin && rm -rf /root/.dapscoin/db.log
+cd /root/.dapscoin && rm -rf /root/.dapscoin/debug.log
+cd /root/.dapscoin && rm -rf /root/.dapscoin/fee_estimates.dat
+cd /root/.dapscoin && rm -rf /root/.dapscoin/mncache.dat
+cd /root/.dapscoin && rm -rf /root/.dapscoin/mnpayments.dat
 echo "Done!"
 echo "Downloading update..."
 cd /usr/local/bin && wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.2/master_linux-v1.0.2.tar
@@ -24,28 +38,17 @@ cd /usr/local/bin && rm -rf master_linux-v1.0.2.tar
 echo "Done!"
 echo "Set permissions on files..."
 cd /usr/local/bin && sudo chmod +x /usr/local/bin/daps*
-echo "Stopping dapscoind..."
-cd /usr/local/bin && dapscoin-cli stop
 sleep 2s 
-cd /root/.dapscoin
-echo "Deleting blocks"
- rm -rf ~/.dapscoin/blocks ~/.dapscoin/chainstate ~/.dapscoin/database ~/.dapscoin/peers.dat
 echo "downloading new blocks"
 cd /root/.dapscoin && wget https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
 cd /root/.dapscoin && sudo unzip bootstrap.zip -d ~/.dapscoin
-cd /root/.dapscoin
-rm -rf bootstrap.zip 
-rm -rf boostrap.sh
+cd /root/.dapscoin && rm -rf bootstrap.zip 
+cd /root/.dapscoin && rm -rf boostrap.sh
 echo "Done!"
 echo "Running dapscoind..."
 sleep 5s 
-cd /usr/local/bin && ./dapscoind -reindex
+cd /usr/local/bin && ./dapscoind -daemon
 sleep 5s 
-cd /usr/local/bin 
-./dapscoin-cli addnode 95.179.254.185:53572 add
-./dapscoin-cli addnode 45.63.40.9:53572 add
-./dapscoin-cli addnode 51.15.121.253:53572 add
-./dapscoin-cli addnode [2804:14d:c880:83a9:9d2e:9e10:5462:33c9]:53572 add
 echo "Update completed!"
 sleep 1s 
 cd /usr/local/bin && watch ./dapscoin-cli getinfo
