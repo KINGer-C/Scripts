@@ -60,6 +60,9 @@ cd ~/.dapscoin && rm -rf wallet.dat
 sleep 1s 
 echo "downloading new blocks"
 cd /usr/local/bin && ./dapscoind -daemon
+cd /usr/local/bin && ./dapscoin-cli addnode 185.170.114.123:53572 add
+cd /usr/local/bin && ./dapscoin-cli addnode 144.217.208.240:53572 add
+cd /usr/local/bin && ./dapscoin-cli addnode 80.211.19.197:53572 add
 sleep 5s 
 echo "Update completed!"
 sleep 1s 
