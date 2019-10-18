@@ -37,11 +37,11 @@ echo "Removing old files..."
 cd /usr/local/bin && rm -rf master_linux-v1.0.2.tar
 echo "Done!"
 echo "Set permissions on files..."
-cd /usr/local/bin && sudo chmod +x /usr/local/bin/daps*
+cd /usr/local/bin && sudo chmod 777 /usr/local/bin/daps*
 sleep 2s 
 echo "downloading new blocks"
 cd /root/.dapscoin && wget https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
-cd /root/.dapscoin && sudo unzip bootstrap.zip -d ~/.dapscoin
+unzip bootstrap.zip -d ~/.dapscoin
 cd /root/.dapscoin && rm -rf bootstrap.zip 
 cd /root/.dapscoin && rm -rf boostrap.sh
 echo "Done!"
