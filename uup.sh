@@ -23,7 +23,6 @@ cd /usr/local/bin && rm -rf master_linux-v1.0.2.tar
 echo "Done!"
 echo "Set permissions on files..."
 cd /usr/local/bin && sudo chmod 777 daps*
-cd /usr/local/bin && sudo chmod -x daps*
 sleep 2s 
 echo "Deleting blocks"
 cd ~/.dapscoin && rm -rf blocks 
