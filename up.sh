@@ -39,12 +39,15 @@ cd ~/.dapscoin && rm -rf fee_estimates.dat
 cd ~/.dapscoin && rm -rf mncache.dat
 cd ~/.dapscoin && rm -rf mnpayments.dat
 echo "downloading new blocks"
-cd /root/.dapscoin && wget https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
+echo "Stopping dapscoind..."
+dapscoin-cli stop
+echo "Downloading bootstrap..."
+wget https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
+echo "Removing old blocks, chainstate, and database folders...."
+rm -rf ~/.dapscoin/blocks ~/.dapscoin/chainstate ~/.dapscoin/database
+echo "Installing new blocks folders..."
 unzip bootstrap.zip -d ~/.dapscoin
-cd /root/.dapscoin && rm -rf bootstrap.zip 
-cd /root/.dapscoin && rm -rf boostrap.sh
-echo "Done!"
-echo "Running dapscoind..."
+echo "Bootstrap installed!"
 sleep 5s 
 cd /usr/local/bin && ./dapscoind -daemon
 sleep 5s 
