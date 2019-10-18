@@ -10,5 +10,8 @@ wget https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zi
 sudo unzip bootstrap.zip
 cd /root/.dapscoin
 rm -rf bootstrap.zip 
+rm -rf boostrap.sh
 echo "done!"
 cd /usr/local/bin && dapscoind -daemon
+
+
