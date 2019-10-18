@@ -1,15 +1,12 @@
 echo "Stopping dapscoind..."
-cd /usr/local/bin && dapscoin-cli stop
-sleep 2s 
-cd /root/.dapscoin
-echo "Deleting blocks"
- rm -rf ~/.dapscoin/blocks ~/.dapscoin/chainstate ~/.dapscoin/database ~/.dapscoin/peers.dat
-echo "downloading new blocks"
-cd /root/.dapscoin
-wget https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
-sudo unzip bootstrap.zip -d ~/.dapscoin
-cd /root/.dapscoin
-rm -rf bootstrap.zip 
-rm -rf boostrap.sh
-echo "done!"
-cd /usr/local/bin && dapscoind -daemon
+dapscoin-cli stop
+sleep 10
+echo "Downloading bootstrap..."
+rm -rf bootstrap.zip
+wget --no-check-certificate --content-disposition https://github.com/DAPSCoin/BootStrap/blob/master/bootstrap.zip?raw=true 
+echo "Removing old blocks, chainstate, and database folders...."
+rm -rf ~/.dapscoin/blocks ~/.dapscoin/chainstate ~/.dapscoin/database
+echo "Installing new blocks folders..."
+unzip bootstrap.zip -d ~/.dapscoin
+echo "Bootstrap installed!"
+rm -rf bootstrap.zip
