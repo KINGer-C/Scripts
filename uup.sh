@@ -2,15 +2,15 @@ echo "Stopping dapscoind..."
 cd /usr/local/bin && dapscoin-cli stop
 sleep 2s 
 echo "Removing old files..."
-cd /usr/local/bin && rm -rf master_linux-v1.0.2.tar
-cd /usr/local/bin && rm -rf master_linux-v1.0.1.3.zip
+cd /usr/local/bin && sudo rm -rf master_linux-v1.0.2.tar
+cd /usr/local/bin && sudo rm -rf master_linux-v1.0.1.3.zip
 echo "Done!"
 echo "Removing old wallet..."
-cd /usr/local/bin && rm -rf dapscoin-cli
-cd /usr/local/bin && rm -rf dapscoind
-cd /usr/local/bin && rm -rf dapscoin-qt
-cd /usr/local/bin && rm -rf dapscoin dapscoin-poa-minerd
-cd /usr/local/bin && rm -rf dapscoin-tx
+cd /usr/local/bin && sudo rm -rf dapscoin-cli
+cd /usr/local/bin && sudo rm -rf dapscoind
+cd /usr/local/bin && sudo rm -rf dapscoin-qt
+cd /usr/local/bin && sudo rm -rf dapscoin dapscoin-poa-minerd
+cd /usr/local/bin && sudo rm -rf dapscoin-tx
 echo "Done!"
 echo "Downloading update..."
 cd /usr/local/bin && wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.2/master_linux-v1.0.2.tar
@@ -26,39 +26,41 @@ cd /usr/local/bin && sudo chmod 777 daps*
 sleep 2s 
 echo "Deleting blocks"
 cd ~/.dapscoin && rm -rf blocks 
-sleep 1s 
+echo "blocks Deleted!"
 cd ~/.dapscoin && rm -rf chainstate 
-sleep 1s 
+echo "chainstate Deleted!"
 cd ~/.dapscoin && rm -rf database 
-sleep 1s 
+echo "database Deleted!"
 cd ~/.dapscoin && rm -rf peers.dat
-sleep 1s 
+echo "peers.dat Deleted!"
 cd ~/.dapscoin && rm -rf backups
-sleep 1s 
+echo "backups Deleted!"
 cd ~/.dapscoin && rm -rf .lock
-sleep 1s 
+echo ".lock Deleted!"
 cd ~/.dapscoin && rm -rf banlist.dat
-sleep 1s 
-cd ~/.dapscoin && rm -rf budget.dat
-sleep 1s 
+echo "banlist.dat Deleted!"
+cd ~/.dapscoin && rm -rf budget.dat 
+echo "budget.dat  Deleted!"
 cd ~/.dapscoin && rm -rf db.log
-sleep 1s 
+echo "db.log Deleted!"
 cd ~/.dapscoin && rm -rf debug.log
-sleep 1s 
+echo "debug.log Deleted!"
 cd ~/.dapscoin && rm -rf fee_estimates.dat
-sleep 1s 
+echo "fee_estimates.dat Deleted!"
 cd ~/.dapscoin && rm -rf mncache.dat
-sleep 1s 
+echo "mncache.dat Deleted!"
 cd ~/.dapscoin && rm -rf mnpayments.dat
-sleep 1s 
+echo "mnpayments.dat Deleted!"
 cd ~/.dapscoin && rm -rf dapscoin.pid
-sleep 1s 
+echo "dapscoin.pid Deleted!"
 cd ~/.dapscoin && rm -rf masternode.conf
-sleep 1s 
+echo "masternode.conf Deleted!"
 cd ~/.dapscoin && rm -rf wallet.dat
-sleep 1s 
+echo "wallet.dat Deleted!"
+sleep 5s
 echo "downloading new blocks"
 cd /usr/local/bin && ./dapscoind -daemon
+sleep 5s
 cd /usr/local/bin && ./dapscoin-cli addnode 185.170.114.123:53572 add
 cd /usr/local/bin && ./dapscoin-cli addnode 144.217.208.240:53572 add
 cd /usr/local/bin && ./dapscoin-cli addnode 80.211.19.197:53572 add
