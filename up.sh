@@ -13,7 +13,7 @@ cd /usr/local/bin && rm -rf dapscoin-qt
 cd /usr/local/bin && rm -rf dapscoin dapscoin-poa-minerd
 cd /usr/local/bin && rm -rf dapscoin-tx
 echo "Deleting blocks"
-cd /root/.dapscoin && rm -rf /blocks 
+cd /root/.dapscoin && rm -rf blocks 
 cd /root/.dapscoin && rm -rf chainstate 
 cd /root/.dapscoin && rm -rf database 
 cd /root/.dapscoin && rm -rf peers.dat
