@@ -9,10 +9,10 @@ sudo ufw allow ssh
 sudo ufw allow 53572
 sudo ufw allow 53573
 sudo ufw enable
-echo "Downloading update..."
+echo "Downloading wallet..."
 cd /usr/local/bin && wget https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.2/master_linux-v1.0.2.tar
 echo "Done!"
-echo "Extracting update..."
+echo "Extracting wallet..."
 cd /usr/local/bin && sudo tar -xvf master_linux-v1.0.2.tar
 echo "Done!"
 echo "Removing old files..."
