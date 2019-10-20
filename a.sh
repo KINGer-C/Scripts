@@ -4,4 +4,4 @@ cd /usr/local/bin
 sleep 2s
 ./dapscoind -daemon
 sleep 2s
-./dapscoin-cli masternode status
+watch ./dapscoin-cli masternode status
