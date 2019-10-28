@@ -29,6 +29,4 @@ cd /usr/local/bin && ./dapscoind -daemon
 sleep 5s 
 echo "Update completed!"
 sleep 10s 
-dapscoind -daemon
-sleep 5s
 cd /usr/local/bin && watch ./dapscoin-cli getinfo
