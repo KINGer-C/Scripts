@@ -26,7 +26,7 @@ echo "Done!"
 echo "Set permissions on files..."
 cd /usr/local/bin && sudo chmod 777 daps*
 sleep 5s 
-cd /usr/local/bin && ./dapscoind -daemon
+cd /usr/local/bin && ./dapscoind
 sleep 5s 
 echo "Update completed!"
 sleep 1s 
