@@ -45,6 +45,7 @@ sudo cp /usr/local/bin/dapscoin-cli00 /usr/local/bin/dapscoin-cli07
 
 sudo chmod +x /usr/local/bin/daps*
 echo "Creating .dapscoin directories..."
+mkdir ~/.dapscoin
 mkdir ~/.dapscoin00
 mkdir ~/.dapscoin01
 mkdir ~/.dapscoin02
