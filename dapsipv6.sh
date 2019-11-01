@@ -54,13 +54,13 @@ mkdir ~/.dapscoin05
 mkdir ~/.dapscoin06
 mkdir ~/.dapscoin07
 cd ~/.dapscoin && vi dapscoin.conf
-cd ~/.dapscoin01 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf && nano dapscoin.conf
-cd ~/.dapscoin02 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf && nano dapscoin.conf
-cd ~/.dapscoin03 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf && nano dapscoin.conf
-cd ~/.dapscoin04 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf && nano dapscoin.conf
-cd ~/.dapscoin05 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf && nano dapscoin.conf
-cd ~/.dapscoin06 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf && nano dapscoin.conf
-cd ~/.dapscoin07 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf && nano dapscoin.conf
+cd ~/.dapscoin01 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf 
+cd ~/.dapscoin02 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf 
+cd ~/.dapscoin03 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf 
+cd ~/.dapscoin04 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf 
+cd ~/.dapscoin05 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf 
+cd ~/.dapscoin06 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf 
+cd ~/.dapscoin07 && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapscoin.conf 
 echo "Cleaning up..."
 cd
 rm -rf master_linux-v1.0.3.4.zip
