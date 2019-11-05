@@ -54,6 +54,7 @@ sudo apt-get install fail2ban -y
 sudo ufw allow ssh
 sudo ufw allow 53574
 sudo ufw enable
+rm -rf dapsipv61_DAPSMN01.sh
 sleep 2s
 dapscoind01 -datadir=/root/.dapscoin01 -wallet=wallet01.dat
 echo " FINISH :)"
