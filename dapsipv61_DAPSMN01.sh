@@ -1,6 +1,22 @@
-echo "#############################"
-echo "### DAPS IVP4 By KINGer-C ###"
-echo "#############################"
+echo "########################################"
+echo "### DAPS IVP6_1 DAPSMN01 By KINGer-C ###"
+echo "########################################"
+
+echo "░░░░░▄▄▀▀▀▀▀▀▀▀▀▄▄░░░░░"
+echo "░░░░█░░░░░░░░░░░░░█░░░░"
+echo "░░░█░░░░░░░░░░▄▄▄░░█░░░"
+echo "░░░█░░▄▄▄░░▄░░███░░█░░░"
+echo "░░░▄█░▄░░░▀▀▀░░░▄░█▄░░░"
+echo "░░░█░░▀█▀█▀█▀█▀█▀░░█░░░"
+echo "░░░▄██▄▄▀▀▀▀▀▀▀▄▄██▄░░░"
+echo "░▄█░█▀▀█▀▀▀█▀▀▀█▀▀█░█▄░"
+echo "▄▀░▄▄▀▄▄▀▀▀▄▀▀▀▄▄▀▄▄░▀▄"
+echo "█░░░░▀▄░█▄░░░▄█░▄▀░░░░█"
+echo "░▀▄▄░█░░█▄▄▄▄▄█░░█░▄▄▀░"
+echo "░░░▀██▄▄███████▄▄██▀░░░"
+echo "░░░████████▀████████░░░"
+echo "░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░░"
+echo "░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░"
 
 sleep 3s
 echo "#######################################"
@@ -35,7 +51,7 @@ echo "daemon=1" >> $CONF_DIR/$CONF_FILE
 echo "logtimestamps=1" >> $CONF_DIR/$CONF_FILE
 echo "maxconnections=64" >> $CONF_DIR/$CONF_FILE
 echo "masternode=1" >> $CONF_DIR/$CONF_FILE
-exho "externalip=[$IP]" >> $CONF_DIR/$CONF_FILE
+echo "externalip=[$IP]" >> $CONF_DIR/$CONF_FILE
 echo "bind=[$IP]:53572" >> $CONF_DIR/$CONF_FILE
 echo "masternodeaddr=[$IP]:53572" >> $CONF_DIR/$CONF_FILE
 echo "masternodeprivkey=$PRIVKEY" >> $CONF_DIR/$CONF_FILE
