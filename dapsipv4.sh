@@ -1,7 +1,7 @@
 echo "#############################"
 echo "### DAPS IVP4 By KINGer-C ###"
 echo "#############################"
-
+sleep 3s
 echo "Downloading latest build..."
 wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.3/master_linux-v1.0.3.4.zip
 echo "Installing unzip..."
@@ -31,6 +31,11 @@ echo "maxconnections=64" >> $CONF_DIR/$CONF_FILE
 echo "masternode=1" >> $CONF_DIR/$CONF_FILE
 echo "masternodeaddr=$IP:$PORT" >> $CONF_DIR/$CONF_FILE
 echo "masternodeprivkey=$PRIVKEY" >> $CONF_DIR/$CONF_FILE
+echo "addnode=80.79.194.69:53572" >> $CONF_DIR/$CONF_FILE
+echo "addnode=212.237.7.86:53572" >> $CONF_DIR/$CONF_FILE
+echo "addnode=95.216.152.41:53572" >> $CONF_DIR/$CONF_FILE
+echo "addnode=144.202.20.83:53572" >> $CONF_DIR/$CONF_FILE
+echo "addnode=51.158.190.147:53572" >> $CONF_DIR/$CONF_FILE
 
 sudo apt-get install fail2ban -y
 sudo ufw allow ssh
