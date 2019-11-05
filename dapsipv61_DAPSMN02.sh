@@ -70,7 +70,7 @@ sudo ufw enable
 cd ~
 rm -rf dapsipv61_DAPSMN02.sh
 sleep 2s
-dapscoind01 -datadir=/root/.dapscoin01 -wallet=wallet02.dat
+dapscoind02 -datadir=/root/.dapscoin02 -wallet=wallet02.dat
 echo " FINISH :)"
 echo "####### DAPS - PRIVACITY MATERS #######"
 echo "███████▓█████▓▓╬╬╬╬╬╬╬╬▓███▓╬╬╬╬╬╬╬▓╬╬▓█"
