@@ -55,7 +55,7 @@ sudo ufw allow ssh
 sudo ufw allow 53574
 sudo ufw enable
 sleep 2s
-dapscoind -daemon
+dapscoind01 -datadir=/root/.dapscoin01 -wallet=wallet01.dat
 echo " FINISH :)"
 sleep 10s
-watch dapscoin-cli getinfo
+watch dapscoin-cli01 -rpcuser=DAPSMN01 -rpcpassword=DAPSMN010 -rpcport=53574 getinfo
