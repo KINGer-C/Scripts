@@ -6,16 +6,16 @@ sleep 3s
 echo "#######################################"
 echo "  ATENTION!!! ATENTION!!! ATENTION!!!"
 echo "#######################################"
-echo " YOU MUST HAS BEEN INSTALED"
+echo " YOU MUST HAD BEEN INSTALED"
 echo "THE MN IPV4 BEFORE RUNNING THIS SCRYPT"
 echo "#######################################"
 sleep 3s
-echo "creating copys of executables"
+echo "Creating copys of executables"
 sudo cp /usr/local/bin/dapscoind /usr/local/bin/dapscoind01
 sudo cp /usr/local/bin/dapscoin-cli /usr/local/bin/dapscoin-cli01
 sudo chmod +x /usr/local/bin/daps*
 
-echo " Creating dapsmn02 root folder"
+echo " Creating DAPSMN01 root folder"
 mkdir ~/.dapscoin01
 
 echo "Enter your IPV6 for the DAPSMN01"
