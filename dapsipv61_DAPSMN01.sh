@@ -23,7 +23,7 @@ read IP
 echo "Enter your masternode private key for node DAPSMN01"
 read PRIVKEY
 
-CONF_DIR=~/.dapscoin/
+CONF_DIR=~/.dapscoin01/
 CONF_FILE=dapscoin.conf
 PORT=53574
 
