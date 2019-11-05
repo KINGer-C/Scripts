@@ -32,6 +32,6 @@ sudo ufw allow 53572
 sudo ufw allow 53573
 sudo ufw enable
 sleep 2s
-dapscoin-cli -daemon
+dapscoind -daemon
 sleep 10s
 watch dapscoin-cli getinfo
