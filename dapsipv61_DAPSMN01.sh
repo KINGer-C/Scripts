@@ -15,9 +15,6 @@ sudo cp /usr/local/bin/dapscoind /usr/local/bin/dapscoind01
 sudo cp /usr/local/bin/dapscoin-cli /usr/local/bin/dapscoin-cli01
 sudo chmod +x /usr/local/bin/daps*
 
-echo " Creating DAPSMN01 root folder"
-mkdir ~/.dapscoin01
-
 echo "Enter your IPV6 for the DAPSMN01"
 read IP
 echo "Enter your masternode private key for node DAPSMN01"
@@ -54,6 +51,7 @@ sudo apt-get install fail2ban -y
 sudo ufw allow ssh
 sudo ufw allow 53574
 sudo ufw enable
+cd ~
 rm -rf dapsipv61_DAPSMN01.sh
 sleep 2s
 dapscoind01 -datadir=/root/.dapscoin01 -wallet=wallet01.dat
