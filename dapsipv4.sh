@@ -60,7 +60,7 @@ sudo ufw enable
 sleep 2s
 dapscoind -daemon
 echo " FINISH :)"
-echo "####### DAPS - PRIVACITY MATERS #######"
+echo "####### DAPS - PRIVACITY MATTERS #######"
 echo "███████▓█████▓▓╬╬╬╬╬╬╬╬▓███▓╬╬╬╬╬╬╬▓╬╬▓█"
 echo "████▓▓▓▓╬╬▓█████╬╬╬╬╬╬███▓╬╬╬╬╬╬╬╬╬╬╬╬╬█"
 echo "███▓▓▓▓╬╬╬╬╬╬▓██╬╬╬╬╬╬▓▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓█" 
