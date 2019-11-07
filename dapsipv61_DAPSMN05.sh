@@ -65,7 +65,7 @@ echo "addnode=51.158.190.147:53572" >> $CONF_DIR/$CONF_FILE
 
 sudo apt-get install fail2ban -y
 sudo ufw allow ssh
-sudo ufw allow 53574
+sudo ufw allow 53578
 sudo ufw enable
 cd ~
 rm -rf dapsipv61_DAPSMN05.sh
