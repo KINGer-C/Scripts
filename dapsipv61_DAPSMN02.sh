@@ -72,7 +72,7 @@ rm -rf dapsipv61_DAPSMN02.sh
 sleep 2s
 dapscoind02 -datadir=/root/.dapscoin02 -wallet=wallet02.dat
 echo " FINISH :)"
-echo "####### DAPS - PRIVACITY MATERS #######"
+echo "####### DAPS - PRIVACITY MATTERS #######"
 echo "███████▓█████▓▓╬╬╬╬╬╬╬╬▓███▓╬╬╬╬╬╬╬▓╬╬▓█"
 echo "████▓▓▓▓╬╬▓█████╬╬╬╬╬╬███▓╬╬╬╬╬╬╬╬╬╬╬╬╬█"
 echo "███▓▓▓▓╬╬╬╬╬╬▓██╬╬╬╬╬╬▓▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓█" 
