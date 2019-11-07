@@ -72,7 +72,7 @@ rm -rf dapsipv61_DAPSMN06.sh
 sleep 2s
 dapscoind06 -datadir=/root/.dapscoin06 -wallet=wallet06.dat
 echo " FINISH :)"
-echo "####### DAPS - PRIVACITY MATERS #######"
+echo "####### DAPS - PRIVACITY MATTERS #######"
 echo "███████▓█████▓▓╬╬╬╬╬╬╬╬▓███▓╬╬╬╬╬╬╬▓╬╬▓█"
 echo "████▓▓▓▓╬╬▓█████╬╬╬╬╬╬███▓╬╬╬╬╬╬╬╬╬╬╬╬╬█"
 echo "███▓▓▓▓╬╬╬╬╬╬▓██╬╬╬╬╬╬▓▓╬╬╬╬╬╬╬╬╬╬╬╬╬╬▓█" 
