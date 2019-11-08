@@ -20,8 +20,16 @@ echo "░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░░"
 echo "░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░"
 sleep 3s
 clear
-sudo apt-get install unzip && sudo apt-get  update && sudo apt-get  upgrade -y
+echo "Do you want to update and upgrade the vps? y/n"
+read var
+if [ $var = y]; then
+  sudo apt-get install unzip && sudo apt-get update && sudo apt-get  upgrade -y
+fi
+echo " Do you want to swap 4GB memory? y/n"
+read var1
+if [ $var1 = 1]; then
 sudo fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
+fi
 clear
 echo "Downloading latest build..."
 wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.3/master_linux-v1.0.3.4.zip
