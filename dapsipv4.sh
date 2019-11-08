@@ -23,6 +23,7 @@ clear
 echo "Do you wanna update and upgrade the system y/n?"
 read var
 if [ $var = y ]
+echo "Upgrading"
 sudo apt-get install unzip && sudo apt-get  update && sudo apt-get  upgrade -y
 fi
 echo " DONE!!!"
@@ -31,6 +32,7 @@ clear
 echo "Do you wanna to swap 4G Memory? y/n"
 read var1
 if [ $var1 = y ]
+echo "Swaping"
 sudo fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
 fi
 echo " DONE!!!"
