@@ -1,3 +1,4 @@
+clear
 echo "#################################"
 echo "### DAPS MASTERNODE EASY WAY ####"
 echo "########## By KINGer-C ##########"
