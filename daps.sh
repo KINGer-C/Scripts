@@ -33,19 +33,19 @@ echo "6 - Install the IPV6 DAPSMN06"
 read choise
 if [ $choise = 0 ]; then
   rm -rf dapsipv4.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv4.sh && chmod 777 dapsipv4.sh && bash dapsipv4.sh
-elfi [ $choise = 1]; then
+elif [ $choise = 1]; then
   rm -rf dapsipv61_DAPSMN01.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv61_DAPSMN01.sh && chmod 777 dapsipv61_DAPSMN01.sh && bash dapsipv61_DAPSMN01.sh
-elfi [ $choise = 2]; then
+elif [ $choise = 2]; then
   rm -rf dapsipv61_DAPSMN02.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv61_DAPSMN02.sh && chmod 777 dapsipv61_DAPSMN02.sh && bash dapsipv61_DAPSMN02.sh
-elfi [ $choise = 3]; then
+elif [ $choise = 3]; then
   rm -rf dapsipv61_DAPSMN03.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv61_DAPSMN03.sh && chmod 777 dapsipv61_DAPSMN03.sh && bash dapsipv61_DAPSMN03.sh
-elfi [ $choise = 4]; then
+elif [ $choise = 4]; then
   rm -rf dapsipv61_DAPSMN04.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv61_DAPSMN04.sh && chmod 777 dapsipv61_DAPSMN04.sh && bash dapsipv61_DAPSMN04.sh
-elfi [ $choise = 5]; then
+elif [ $choise = 5]; then
   rm -rf dapsipv61_DAPSMN05.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv61_DAPSMN05.sh && chmod 777 dapsipv61_DAPSMN05.sh && bash dapsipv61_DAPSMN05.sh
-elfi [ $choise = 5]; then
+elif [ $choise = 5]; then
   rm -rf dapsipv61_DAPSMN06.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv61_DAPSMN06.sh && chmod 777 dapsipv61_DAPSMN06.sh && bash dapsipv61_DAPSMN06.sh
- else
+else
   echo" Command not found, please restart the instalation"
 fi
 
