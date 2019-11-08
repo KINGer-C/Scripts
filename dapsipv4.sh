@@ -1,6 +1,7 @@
 echo "#############################"
 echo "### DAPS IVP4 By KINGer-C ###"
 echo "#############################"
+clear
 echo "░░░░░▄▄▀▀▀▀▀▀▀▀▀▄▄░░░░░"
 echo "░░░░█░░░░░░░░░░░░░█░░░░"
 echo "░░░█░░░░░░░░░░▄▄▄░░█░░░"
@@ -17,15 +18,34 @@ echo "░░░████████▀████████░░░"
 echo "░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░░"
 echo "░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░"
 sleep 3s
+clear
+echo "Do you wanna update and upgrade the system y/n?"
+read var
+if ($var = y )
+sudo apt-get install unzip && sudo apt-get  update && sudo apt-get  upgrade -y
+fi
+echo " DONE!!!"
+sleep 1
+clear
+echo "Do you wanna to swap 4G Memory? y/n"
+read var1
+if ($var1 = y)
+sudo fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
+fi
+echo " DONE!!!"
+sleep 1
+clear
 echo "Downloading latest build..."
 wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.3/master_linux-v1.0.3.4.zip
 echo "Installing unzip..."
 sudo apt-get install unzip -y
 echo "Unzipping latest zip..."
 sudo unzip -jo master_linux-v1.0.3.4.zip -d /usr/local/bin
+echo "Giving permissions...."
 sudo chmod +x /usr/local/bin/daps*
+echo "Removing old files"
 rm -rf master_linux-v1.0.3.4.zip
-
+rm -rf ~/.dapscoin/
 echo "Enter your IPV4 for the DAPSMN00"
 read IP
 echo "Enter your masternode private key for node DAPSMN00"
@@ -58,6 +78,7 @@ sudo ufw allow 53572
 sudo ufw allow 53573
 sudo ufw enable
 sleep 2s
+clear
 dapscoind -daemon
 echo " FINISH :)"
 echo "####### DAPS - PRIVACITY MATTERS #######"
