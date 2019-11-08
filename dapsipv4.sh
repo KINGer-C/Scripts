@@ -1,3 +1,5 @@
+
+clear
 echo "#############################"
 echo "### DAPS IVP4 By KINGer-C ###"
 echo "#############################"
@@ -22,12 +24,12 @@ sleep 3s
 clear
 echo "Do you want to update and upgrade the vps? y/n"
 read var
-if [ $var = y ]; then
+if [ $var = 'y' ]; then
   sudo apt-get install unzip && sudo apt-get update && sudo apt-get  upgrade -y
 fi
 echo " Do you want to swap 4GB memory? y/n"
 read var1
-if [ $var1 = y ]; then
+if [ $var1 = 'y' ]; then
   sudo fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
 fi
 clear
