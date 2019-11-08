@@ -29,17 +29,19 @@ echo "░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░░"
 echo "░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░"
 sleep 2s
 clear
+echo "###############################################"
 ls -al
-echo "##############################################"
-echo "             WHAT DO YOU WANNA DO?"
-echo "0 - Install the IPV4 DAPSMN00 - .dapscoin"
-echo "1 - Install the IPV6 DAPSMN01 - .dapscoin01 "
-echo "2 - Install the IPV6 DAPSMN02 - .dapscoin02"
-echo "3 - Install the IPV6 DAPSMN03 - .dapscoin03"
-echo "4 - Install the IPV6 DAPSMN04 - .dapscoin04"
-echo "5 - Install the IPV6 DAPSMN05 - .dapscoin05"
-echo "6 - Install the IPV6 DAPSMN06 - .dapscoin06"
-echo "##############################################"
+echo "###############################################"
+echo "#             WHAT DO YOU WANNA DO?           #"
+echo "###############################################"
+echo "# 0 - Install the IPV4 DAPSMN00 - .dapscoin   #"
+echo "# 1 - Install the IPV6 DAPSMN01 - .dapscoin01 #"
+echo "# 2 - Install the IPV6 DAPSMN02 - .dapscoin02 #"
+echo "# 3 - Install the IPV6 DAPSMN03 - .dapscoin03 #"
+echo "# 4 - Install the IPV6 DAPSMN04 - .dapscoin04 #"
+echo "# 5 - Install the IPV6 DAPSMN05 - .dapscoin05 #"
+echo "# 6 - Install the IPV6 DAPSMN06 - .dapscoin06 #"
+echo "###############################################"
 read choise
 clear
 if [ $choise = 0 ]; then
