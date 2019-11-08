@@ -49,4 +49,8 @@ elfi [ $choise = 5]; then
   echo" Command not found, please restart the instalation"
 fi
 
+cd ~
+rm -rf daps.sh
+
+
 
