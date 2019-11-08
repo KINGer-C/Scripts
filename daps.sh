@@ -40,8 +40,8 @@ echo "4 - Install the IPV6 DAPSMN04 - .dapscoin04"
 echo "5 - Install the IPV6 DAPSMN05 - .dapscoin05"
 echo "6 - Install the IPV6 DAPSMN06 - .dapscoin06"
 echo "##############################################"
-
 read choise
+clear
 if [ $choise = 0 ]; then
   rm -rf dapsipv4.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv4.sh && chmod 777 dapsipv4.sh && bash dapsipv4.sh
 elif [ $choise = '1' ]; then
