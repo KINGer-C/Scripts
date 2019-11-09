@@ -33,7 +33,6 @@ echo "###############################"
 echo ""
 echo "Running this script on Ubuntu 18.04 LTS or newer is highly recommended."
 
-sudo apt-get -y update
 sudo apt-get -y install git python virtualenv ufw pwgen
 
 echo ""
