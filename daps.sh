@@ -12,36 +12,21 @@ rm -rf dapsipv61_DAPSMN04.sh
 rm -rf dapsipv61_DAPSMN05.sh
 rm -rf dapsipv61_DAPSMN06.sh
 clear
-echo "░░░░░▄▄▀▀▀▀▀▀▀▀▀▄▄░░░░░"
-echo "░░░░█░░░░░░░░░░░░░█░░░░"
-echo "░░░█░░░░░░░░░░▄▄▄░░█░░░"
-echo "░░░█░░▄▄▄░░▄░░███░░█░░░"
-echo "░░░▄█░▄░░░▀▀▀░░░▄░█▄░░░"
-echo "░░░█░░▀█▀█▀█▀█▀█▀░░█░░░"
-echo "░░░▄██▄▄▀▀▀▀▀▀▀▄▄██▄░░░"
-echo "░▄█░█▀▀█▀▀▀█▀▀▀█▀▀█░█▄░"
-echo "▄▀░▄▄▀▄▄▀▀▀▄▀▀▀▄▄▀▄▄░▀▄"
-echo "█░░░░▀▄░█▄░░░▄█░▄▀░░░░█"
-echo "░▀▄▄░█░░█▄▄▄▄▄█░░█░▄▄▀░"
-echo "░░░▀██▄▄███████▄▄██▀░░░"
-echo "░░░████████▀████████░░░"
-echo "░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░░"
-echo "░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░"
 sleep 2s
 clear
-echo "###############################################"
+echo "###################################################################################"
 ls -al
-echo "###############################################"
-echo "#             WHAT DO YOU WANNA DO?           #"
-echo "###############################################"
-echo "# 0 - Install the IPV4 DAPSMN00 - .dapscoin   #"
-echo "# 1 - Install the IPV6 DAPSMN01 - .dapscoin01 #"
-echo "# 2 - Install the IPV6 DAPSMN02 - .dapscoin02 #"
-echo "# 3 - Install the IPV6 DAPSMN03 - .dapscoin03 #"
-echo "# 4 - Install the IPV6 DAPSMN04 - .dapscoin04 #"
-echo "# 5 - Install the IPV6 DAPSMN05 - .dapscoin05 #"
-echo "# 6 - Install the IPV6 DAPSMN06 - .dapscoin06 #"
-echo "###############################################"
+echo "###################################################################################"
+echo "#                                WHAT DO YOU WANNA DO?                            #"
+echo "###################################################################################"
+echo "# 0 - Install the IPV4 DAPSMN00 - .dapscoin   # r0 - Uninstall the IPV4 DAPSMN00  #"
+echo "# 1 - Install the IPV6 DAPSMN01 - .dapscoin01 # r1 - Uninstall the IPV4 DAPSMN01  #"
+echo "# 2 - Install the IPV6 DAPSMN02 - .dapscoin02 # r2 - Uninstall the IPV4 DAPSMN02  #"
+echo "# 3 - Install the IPV6 DAPSMN03 - .dapscoin03 # r3 - Uninstall the IPV4 DAPSMN03  #"
+echo "# 4 - Install the IPV6 DAPSMN04 - .dapscoin04 # r4 - Uninstall the IPV4 DAPSMN04  #"
+echo "# 5 - Install the IPV6 DAPSMN05 - .dapscoin05 # r5 - Uninstall the IPV4 DAPSMN05  #"
+echo "# 6 - Install the IPV6 DAPSMN06 - .dapscoin06 # r6 - Uninstall the IPV4 DAPSMN06  #"
+echo "###################################################################################"
 read choise
 clear
 if [ $choise = 0 ]; then
@@ -64,6 +49,14 @@ elif [  $choise = 'r1' ]; then
   dapscoin-cli01 -rpcuser=DAPSMN01 -rpcpassword=DAPSMN010 -rpcport=53574 stop && rm -rf .dapscoin01
 elif [  $choise = 'r2' ]; then
   dapscoin-cli02 -rpcuser=DAPSMN02 -rpcpassword=DAPSMN020 -rpcport=53575 stop && rm -rf .dapscoin02
+elif [  $choise = 'r3' ]; then
+  dapscoin-cli03 -rpcuser=DAPSMN03 -rpcpassword=DAPSMN030 -rpcport=53576 stop && rm -rf .dapscoin03
+elif [  $choise = 'r4' ]; then
+  dapscoin-cli04 -rpcuser=DAPSMN04 -rpcpassword=DAPSMN040 -rpcport=53577 stop && rm -rf .dapscoin04
+elif [  $choise = 'r5' ]; then
+  dapscoin-cli05 -rpcuser=DAPSMN05 -rpcpassword=DAPSMN050 -rpcport=53578 stop && rm -rf .dapscoin05
+elif [  $choise = 'r6' ]; then
+  dapscoin-cli06 -rpcuser=DAPSMN06 -rpcpassword=DAPSMN060 -rpcport=53579 stop && rm -rf .dapscoin06
 else
   echo " Command not found, please restart the instalation"
 fi
