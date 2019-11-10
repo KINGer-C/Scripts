@@ -1,7 +1,8 @@
 echo "########################################"
 echo "### DAPS IVP6_2 DAPSMN02 By KINGer-C ###"
 echo "########################################"
-
+sleep 2s
+clear
 echo "░░░░░▄▄▀▀▀▀▀▀▀▀▀▄▄░░░░░"
 echo "░░░░█░░░░░░░░░░░░░█░░░░"
 echo "░░░█░░░░░░░░░░▄▄▄░░█░░░"
@@ -17,8 +18,8 @@ echo "░░░▀██▄▄███████▄▄██▀░░░"
 echo "░░░████████▀████████░░░"
 echo "░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░░"
 echo "░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░"
-
 sleep 3s
+clear
 echo "#######################################"
 echo "  ATENTION!!! ATENTION!!! ATENTION!!!"
 echo "#######################################"
@@ -62,11 +63,18 @@ echo "addnode=212.237.7.86:53572" >> $CONF_DIR/$CONF_FILE
 echo "addnode=95.216.152.41:53572" >> $CONF_DIR/$CONF_FILE
 echo "addnode=144.202.20.83:53572" >> $CONF_DIR/$CONF_FILE
 echo "addnode=51.158.190.147:53572" >> $CONF_DIR/$CONF_FILE
-
+echo "Getting permissions ..."
 sudo apt-get install fail2ban -y
 sudo ufw allow ssh
 sudo ufw allow 53575
-sudo ufw enable
+sudo ufw --force enable
+echo "Downloading Bootstrap ..."
+cd ~./dapscoin02
+wget https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
+echo "Extracting Boostrap"
+sudo unzip bootstrap.zip
+echo "Removing Boostrap zip files ..."
+rm -rf bootstrap.zip
 cd ~
 rm -rf dapsipv61_DAPSMN02.sh
 sleep 2s
@@ -99,4 +107,5 @@ echo "███████████▓▓█▓▓▓▓███▓╬╬�
 echo "██████████████▓▓▓███▓▓╬╬╬╬╬╬╬╬██████████"
 echo "███████████████▓▓▓██▓▓╬╬╬╬╬╬▓███████████"
 sleep 10s
+clear
 watch dapscoin-cli02 -rpcuser=DAPSMN02 -rpcpassword=DAPSMN020 -rpcport=53575 getinfo
