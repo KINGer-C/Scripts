@@ -69,11 +69,11 @@ sudo ufw allow ssh
 sudo ufw allow 53575
 sudo ufw --force enable
 echo "Downloading Bootstrap ..."
-cd ~./dapscoin02 && wget https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
+cd .dapscoin02 && wget https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
 echo "Extracting Boostrap"
-cd ~./dapscoin02 && sudo unzip bootstrap.zip
+cd .dapscoin02 && sudo unzip bootstrap.zip
 echo "Removing Boostrap zip files ..."
-cd ~./dapscoin02 && rm -rf bootstrap.zip
+cd .dapscoin02 && rm -rf bootstrap.zip
 cd ~
 rm -rf dapsipv61_DAPSMN02.sh
 sleep 2s
