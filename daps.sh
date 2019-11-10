@@ -59,11 +59,11 @@ elif [ $choise = '5' ]; then
 elif [ $choise = '6' ]; then
   rm -rf dapsipv61_DAPSMN06.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv61_DAPSMN06.sh && chmod 777 dapsipv61_DAPSMN06.sh && bash dapsipv61_DAPSMN06.sh
 elif [  $choise = 'r0' ]; then
-  dapscoin-cli stop && cd ~ && rm -rf .dapscoin
+  dapscoin-cli stop && rm -rf .dapscoin
 elif [  $choise = 'r1' ]; then
-  dapscoin-cli01 -rpcuser=DAPSMN01 -rpcpassword=DAPSMN010 -rpcport=53574 stop && cd ~ && rm -rf .dapscoin01
+  dapscoin-cli01 -rpcuser=DAPSMN01 -rpcpassword=DAPSMN010 -rpcport=53574 stop && rm -rf .dapscoin01
 elif [  $choise = 'r2' ]; then
-  dapscoin-cli02 -rpcuser=DAPSMN02 -rpcpassword=DAPSMN020 -rpcport=53575 stop && cd ~ && rm -rf .dapscoin02
+  dapscoin-cli02 -rpcuser=DAPSMN02 -rpcpassword=DAPSMN020 -rpcport=53575 stop && rm -rf .dapscoin02
 else
   echo " Command not found, please restart the instalation"
 fi
