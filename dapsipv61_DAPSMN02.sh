@@ -72,16 +72,6 @@ cd ~
 rm -rf dapsipv61_DAPSMN02.sh
 sleep 2s
 dapscoind02 -datadir=/root/.dapscoin02 -wallet=wallet02.dat
-sleep 5s
-dapscoin-cli02 -rpcuser=DAPSMN02 -rpcpassword=DAPSMN020 -rpcport=53575 stop
-echo "Downloading Bootstrap ..."
-cd /root/.dapscoin02 && wget https://github.com/DAPSCoin/BootStrap/releases/download/latest/bootstrap.zip
-echo "Extracting Boostrap"
-sleep 3s
-cd /root/.dapscoin02 && unzip bootstrap.zip
-echo "Removing Boostrap zip files ..."
-cd /root/.dapscoin02 && rm -rf bootstrap.zip
-dapscoind02 -datadir=/root/.dapscoin02 -wallet=wallet02.dat
 echo " FINISH :)"
 echo "####### DAPS - PRIVACITY MATTERS #######"
 echo "███████▓█████▓▓╬╬╬╬╬╬╬╬▓███▓╬╬╬╬╬╬╬▓╬╬▓█"
