@@ -20,12 +20,12 @@ echo "##########################################################################
 echo "#                                WHAT DO YOU WANNA DO?                            #"
 echo "###################################################################################"
 echo "# 0 - Install the IPV4 DAPSMN00 - .dapscoin   # r0 - Uninstall the IPV4 DAPSMN00  #"
-echo "# 1 - Install the IPV6 DAPSMN01 - .dapscoin01 # r1 - Uninstall the IPV4 DAPSMN01  #"
-echo "# 2 - Install the IPV6 DAPSMN02 - .dapscoin02 # r2 - Uninstall the IPV4 DAPSMN02  #"
-echo "# 3 - Install the IPV6 DAPSMN03 - .dapscoin03 # r3 - Uninstall the IPV4 DAPSMN03  #"
-echo "# 4 - Install the IPV6 DAPSMN04 - .dapscoin04 # r4 - Uninstall the IPV4 DAPSMN04  #"
-echo "# 5 - Install the IPV6 DAPSMN05 - .dapscoin05 # r5 - Uninstall the IPV4 DAPSMN05  #"
-echo "# 6 - Install the IPV6 DAPSMN06 - .dapscoin06 # r6 - Uninstall the IPV4 DAPSMN06  #"
+echo "# 1 - Install the IPV6 DAPSMN01 - .dapscoin01 # r1 - Uninstall the IPV6 DAPSMN01  #"
+echo "# 2 - Install the IPV6 DAPSMN02 - .dapscoin02 # r2 - Uninstall the IPV6 DAPSMN02  #"
+echo "# 3 - Install the IPV6 DAPSMN03 - .dapscoin03 # r3 - Uninstall the IPV6 DAPSMN03  #"
+echo "# 4 - Install the IPV6 DAPSMN04 - .dapscoin04 # r4 - Uninstall the IPV6 DAPSMN04  #"
+echo "# 5 - Install the IPV6 DAPSMN05 - .dapscoin05 # r5 - Uninstall the IPV6 DAPSMN05  #"
+echo "# 6 - Install the IPV6 DAPSMN06 - .dapscoin06 # r6 - Uninstall the IPV6 DAPSMN06  #"
 echo "###################################################################################"
 read choise
 clear
