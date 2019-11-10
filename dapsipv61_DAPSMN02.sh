@@ -81,7 +81,7 @@ sleep 3s
 cd /root/.dapscoin02 && unzip bootstrap.zip
 echo "Removing Boostrap zip files ..."
 cd /root/.dapscoin02 && rm -rf bootstrap.zip
-
+dapscoind02 -datadir=/root/.dapscoin02 -wallet=wallet02.dat
 echo " FINISH :)"
 echo "####### DAPS - PRIVACITY MATTERS #######"
 echo "███████▓█████▓▓╬╬╬╬╬╬╬╬▓███▓╬╬╬╬╬╬╬▓╬╬▓█"
