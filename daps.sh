@@ -72,7 +72,7 @@ elif [ $choise = 'c2' ]; then
 elif [ $choise = 'i' ]; then
   ifconfig
 elif [ $choise = 'e' ]; then
-    break
+    rm -rf daps.sh && break
 elif [ $choise = 's4' ]; then
   sudo fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
 elif [ $choise = 's2' ]; then
