@@ -37,12 +37,6 @@ read choise
 clear
 if [ $choise = 0 ]; then
   rm -rf dapsipv4.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv4.sh && chmod 777 dapsipv4.sh && bash dapsipv4.sh
-elif [ $choise = 's4' ]; then
-  sudo fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
-elif [ $choise = 's2' ]; then
-  sudo fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
-elif [ $choise = 's6' ]; then
-  sudo fallocate -l 6G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
 elif [ $choise = '1' ]; then
   rm -rf dapsipv61_DAPSMN01.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv61_DAPSMN01.sh && chmod 777 dapsipv61_DAPSMN01.sh && bash dapsipv61_DAPSMN01.sh
 elif [ $choise = '2' ]; then
@@ -79,6 +73,12 @@ elif [ $choise = 'i' ]; then
   ifconfig
 elif [ $choise = 'e' ]; then
     break
+elif [ $choise = 's4' ]; then
+  sudo fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
+elif [ $choise = 's2' ]; then
+  sudo fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
+elif [ $choise = 's6' ]; then
+  sudo fallocate -l 6G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
 else
   echo " Command not found, please restart the instalation"
 fi
