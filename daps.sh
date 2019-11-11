@@ -49,19 +49,19 @@ elif [ $choise = '5' ]; then
   rm -rf dapsipv61_DAPSMN05.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv61_DAPSMN05.sh && chmod 777 dapsipv61_DAPSMN05.sh && bash dapsipv61_DAPSMN05.sh
 elif [ $choise = '6' ]; then
   rm -rf dapsipv61_DAPSMN06.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv61_DAPSMN06.sh && chmod 777 dapsipv61_DAPSMN06.sh && bash dapsipv61_DAPSMN06.sh
-elif [  $choise = 'r0' ]; then
+elif [ $choise = 'r0' ]; then
   dapscoin-cli stop && rm -rf .dapscoin
-elif [  $choise = 'r1' ]; then
+elif [ $choise = 'r1' ]; then
   dapscoin-cli01 -rpcuser=DAPSMN01 -rpcpassword=DAPSMN010 -rpcport=53574 stop && rm -rf .dapscoin01
-elif [  $choise = 'r2' ]; then
+elif [ $choise = 'r2' ]; then
   dapscoin-cli02 -rpcuser=DAPSMN02 -rpcpassword=DAPSMN020 -rpcport=53575 stop && rm -rf .dapscoin02
-elif [  $choise = 'r3' ]; then
+elif [ $choise = 'r3' ]; then
   dapscoin-cli03 -rpcuser=DAPSMN03 -rpcpassword=DAPSMN030 -rpcport=53576 stop && rm -rf .dapscoin03
-elif [  $choise = 'r4' ]; then
+elif [ $choise = 'r4' ]; then
   dapscoin-cli04 -rpcuser=DAPSMN04 -rpcpassword=DAPSMN040 -rpcport=53577 stop && rm -rf .dapscoin04
-elif [  $choise = 'r5' ]; then
+elif [ $choise = 'r5' ]; then
   dapscoin-cli05 -rpcuser=DAPSMN05 -rpcpassword=DAPSMN050 -rpcport=53578 stop && rm -rf .dapscoin05
-elif [  $choise = 'r6' ]; then
+elif [ $choise = 'r6' ]; then
   dapscoin-cli06 -rpcuser=DAPSMN06 -rpcpassword=DAPSMN060 -rpcport=53579 stop && rm -rf .dapscoin06
 elif [ $choise = 'u' ]; then
   sudo apt-get install unzip && sudo apt-get update && sudo apt-get  upgrade -y
@@ -71,13 +71,13 @@ elif [ $choise = 's2' ]; then
   sudo fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
 elif [ $choise = 's6' ]; then
   sudo fallocate -l 6G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
-elif [$choise = 'c1']; then
+elif [ $choise = 'c1' ]; then
   nano /etc/network/interfaces && systemctl restart networking
-elif [$choise = 'c2']; then
+elif [ $choise = 'c2' ]; then
   sudo nano /etc/netplan/10-ens3.yaml && netplan apply
-elif [$choise = 'i']; then
+elif [ $choise = 'i' ]; then
   ifconfig
-elif [$choise = 'e']; then
+elif [ $choise = 'e' ]; then
     break
 else
   echo " Command not found, please restart the instalation"
