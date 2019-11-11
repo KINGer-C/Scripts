@@ -14,6 +14,8 @@ rm -rf dapsipv61_DAPSMN06.sh
 clear
 sleep 2s
 clear
+while :
+do
 echo "###################################################################################"
 ls -al
 echo "###################################################################################"
@@ -26,6 +28,10 @@ echo "# 3 - Install the IPV6 DAPSMN03 - .dapscoin03 # r3 - Uninstall the IPV6 DA
 echo "# 4 - Install the IPV6 DAPSMN04 - .dapscoin04 # r4 - Uninstall the IPV6 DAPSMN04  #"
 echo "# 5 - Install the IPV6 DAPSMN05 - .dapscoin05 # r5 - Uninstall the IPV6 DAPSMN05  #"
 echo "# 6 - Install the IPV6 DAPSMN06 - .dapscoin06 # r6 - Uninstall the IPV6 DAPSMN06  #"
+echo "# u - update and upgrade ( recomended once)   # s2 - swap 2Gb memory              #"
+echo "# s4 - Swap 4Gb memory                        # s6 - Swap 6gb memory              #"
+echo "# C1 - Configure ipv6 (ubuntu 16)             # c2 - Configure ipv6 (ubuntu 18)   #"
+echo "# i - Get ip information                      # e - exit                          #"
 echo "###################################################################################"
 read choise
 clear
@@ -57,9 +63,25 @@ elif [  $choise = 'r5' ]; then
   dapscoin-cli05 -rpcuser=DAPSMN05 -rpcpassword=DAPSMN050 -rpcport=53578 stop && rm -rf .dapscoin05
 elif [  $choise = 'r6' ]; then
   dapscoin-cli06 -rpcuser=DAPSMN06 -rpcpassword=DAPSMN060 -rpcport=53579 stop && rm -rf .dapscoin06
+elif [ $choise = 'u' ]; then
+  sudo apt-get install unzip && sudo apt-get update && sudo apt-get  upgrade -y
+elif [ $choise = 's4' ]; then
+  sudo fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
+elif [ $choise = 's2' ]; then
+  sudo fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
+elif [ $choise = 's6' ]; then
+  sudo fallocate -l 6G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
+elif [$choise = 'c1']; then
+  nano /etc/network/interfaces && systemctl restart networking
+elif [$choise = 'c2']; then
+  sudo nano /etc/netplan/10-ens3.yaml && netplan apply
+elif [$choise = 'i']; then
+  ifconfig
+elif [$choise = 'e']; then
+    break
 else
   echo " Command not found, please restart the instalation"
 fi
 cd ~
 rm -rf daps.sh
-
+done
