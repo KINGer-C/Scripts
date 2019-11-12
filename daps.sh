@@ -32,6 +32,7 @@ echo "# u - update and upgrade ( recomended once)   # s2 - swap 2Gb memory      
 echo "# s4 - Swap 4Gb memory                        # s6 - Swap 6gb memory              #"
 echo "# c1 - Configure ipv6 (ubuntu 16)             # c2 - Configure ipv6 (ubuntu 18)   #"
 echo "# i - Get ip information                      # e - exit                          #"
+echo "# o - Only ipv6  " you can ingnore de ipv6 warings about ipv4 pre-instalation     #"
 echo "###################################################################################"
 read choise
 clear
@@ -49,6 +50,8 @@ elif [ $choise = '5' ]; then
   rm -rf dapsipv61_DAPSMN05.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv61_DAPSMN05.sh && chmod 777 dapsipv61_DAPSMN05.sh && bash dapsipv61_DAPSMN05.sh
 elif [ $choise = '6' ]; then
   rm -rf dapsipv61_DAPSMN06.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/dapsipv61_DAPSMN06.sh && chmod 777 dapsipv61_DAPSMN06.sh && bash dapsipv61_DAPSMN06.sh
+elif [ $choise = 'o' ]; then
+  wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.3/master_linux-v1.0.3.4.zip && sudo apt-get install unzip -y && sudo unzip -jo master_linux-v1.0.3.4.zip -d /usr/local/bin && sudo chmod +x /usr/local/bin/daps* && rm -rf master_linux-v1.0.3.4.zip
 elif [ $choise = 'r0' ]; then
   dapscoin-cli stop && rm -rf .dapscoin
 elif [ $choise = 'r1' ]; then
