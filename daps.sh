@@ -83,7 +83,7 @@ elif [ $choise = 's2' ]; then
 elif [ $choise = 's6' ]; then
   sudo fallocate -l 6G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
 else
-  echo " Command not found, please restart the instalation"
+  echo "Command not found, please restart the instalation"
 fi
 cd ~
 rm -rf daps.sh
