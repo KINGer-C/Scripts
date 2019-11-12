@@ -30,7 +30,7 @@ echo "# 5 - Install the IPV6 DAPSMN05 - .dapscoin05 # r5 - Uninstall the IPV6 DA
 echo "# 6 - Install the IPV6 DAPSMN06 - .dapscoin06 # r6 - Uninstall the IPV6 DAPSMN06  #"
 echo "# u - update and upgrade ( recomended once)   # s2 - swap 2Gb memory              #"
 echo "# s4 - Swap 4Gb memory                        # s6 - Swap 6gb memory              #"
-echo "# C1 - Configure ipv6 (ubuntu 16)             # c2 - Configure ipv6 (ubuntu 18)   #"
+echo "# c1 - Configure ipv6 (ubuntu 16)             # c2 - Configure ipv6 (ubuntu 18)   #"
 echo "# i - Get ip information                      # e - exit                          #"
 echo "###################################################################################"
 read choise
