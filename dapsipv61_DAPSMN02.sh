@@ -63,6 +63,10 @@ echo "addnode=212.237.7.86:53572" >> $CONF_DIR/$CONF_FILE
 echo "addnode=95.216.152.41:53572" >> $CONF_DIR/$CONF_FILE
 echo "addnode=144.202.20.83:53572" >> $CONF_DIR/$CONF_FILE
 echo "addnode=51.158.190.147:53572" >> $CONF_DIR/$CONF_FILE
+echo "addnode=159.203.169.82:53572" >> $CONF_DIR/$CONF_FILE
+echo "addnode=51.158.173.129:53572" >> $CONF_DIR/$CONF_FILE
+echo "addnode=80.211.15.156:53572" >> $CONF_DIR/$CONF_FILE
+echo "addnode=51.15.98.244:53572" >> $CONF_DIR/$CONF_FILE
 echo "Getting permissions ..."
 sudo apt-get install fail2ban -y
 sudo ufw allow ssh
