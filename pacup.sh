@@ -6,7 +6,7 @@ sleep 2s
 echo "Deleting files .."
 echo "Deleting pacglobal executables"
 rm -rf ~/PACGlobal
-sleep 10s
+sleep 5s
 echo "Done!"
 echo "Downloading new wallet"
 mkdir ~/PACGlobal 
