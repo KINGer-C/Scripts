@@ -17,8 +17,9 @@ mv -v ~/pacglobal-035d4df02-lin64/pacglobal-cli ~/PACGlobal
 mv -v ~/pacglobal-035d4df02-lin64/pacglobal-tx ~/PACGlobal
 mv -v ~/pacglobal-035d4df02-lin64/pacglobal-qt ~/PACGlobal
 cd ~/PACGlobal && sudo chmod +x pac*
-rm -rf pacglobal-035d4df02-lin64.tgz
-rm -rf pacglobal-035d4df02-lin64
+
+cd ~ && rm -rf pacglobal-035d4df02-lin64.tgz
+cd ~ && rm -rf pacglobal-035d4df02-lin64
 sleep 3s
 echo "Starting wallet"
 cd ~/PACGlobal && ./pacglobald -daemon
