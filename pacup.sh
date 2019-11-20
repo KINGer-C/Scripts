@@ -21,5 +21,5 @@ cd ~/PACGlobal && sudo chmod +x pac*
 rm -rf pacglobal-035d4df02-lin64.tgz
 rm -rf pacglobal-035d4df02-lin64
 sleep 3s
-cd /root/PACGlobal/pacglobald -daemon
+cd ~/PACGlobal && pacglobald -daemon
 echo "Masternode sucessfull updated!"
