@@ -10,16 +10,13 @@ echo "Done!"
 echo "Downloading new wallet"
 mkdir ~/PACGlobal 
 sleep 3s
-wget https://github.com/PACGlobalOfficial/PAC/releases/download/035d4df02/pacglobal-035d4df02-lin64.tgz 
-chmod -x pacglobal-035d4df02-lin64.tgz 
-tar -xvzf pacglobal-035d4df02-lin64.tgz
+wget https://github.com/PACGlobalOfficial/PAC/releases/download/035d4df02/pacglobal-035d4df02-lin64.tgz && chmod -x pacglobal-035d4df02-lin64.tgz && tar -xvzf pacglobal-035d4df02-lin64.tgz
 sleep 5s
 mv -v ~/pacglobal-035d4df02-lin64/pacglobald ~/PACGlobal 
 mv -v ~/pacglobal-035d4df02-lin64/pacglobal-cli ~/PACGlobal 
 mv -v ~/pacglobal-035d4df02-lin64/pacglobal-tx ~/PACGlobal
 mv -v ~/pacglobal-035d4df02-lin64/pacglobal-qt ~/PACGlobal
 cd ~/PACGlobal && sudo chmod +x pac*
-
 cd ~ && rm -rf pacglobal-035d4df02-lin64.tgz
 cd ~ && rm -rf pacglobal-035d4df02-lin64
 sleep 3s
