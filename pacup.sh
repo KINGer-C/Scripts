@@ -17,10 +17,9 @@ mv -v ~/pacglobal-035d4df02-lin64/pacglobald ~/PACGlobal
 mv -v ~/pacglobal-035d4df02-lin64/pacglobal-cli ~/PACGlobal 
 mv -v ~/pacglobal-035d4df02-lin64/pacglobal-tx ~/PACGlobal
 mv -v ~/pacglobal-035d4df02-lin64/pacglobal-qt ~/PACGlobal
-sudo chmod +x ~/PACGlobal/pacglobal*
+cd ~/PACGlobal && sudo chmod +x pac*
 rm -rf pacglobal-035d4df02-lin64.tgz
 rm -rf pacglobal-035d4df02-lin64
 sleep 3s
-ExecStart=/root/PACGlobal/pacglobald -daemon -pid=/root/.PACGlobal/pacglobal.pid \
-          -conf=/root/.PACGlobal/pacglobal.conf -datadir=/root/.PACGlobal/
+cd /root/PACGlobal/pacglobald -daemon
 echo "Masternode sucessfull updated!"
