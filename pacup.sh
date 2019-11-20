@@ -1,6 +1,5 @@
 echo " Stoping node ..."
-ExecStop=-/root/PACGlobal/pacglobal-cli -conf=/root/.PACGlobal/pacglobal.conf \
-          -datadir=/root/.PACGlobal/ stop
+cd ~/PACGlobal && ./pacglobal-cli stop
 echo "Wallet successfully stoped"
 sleep 2s
 echo "Deleting files .."
@@ -21,5 +20,5 @@ cd ~/PACGlobal && sudo chmod +x pac*
 rm -rf pacglobal-035d4df02-lin64.tgz
 rm -rf pacglobal-035d4df02-lin64
 sleep 3s
-cd ~/PACGlobal && pacglobald -daemon
+cd ~/PACGlobal && ./pacglobald -daemon
 echo "Masternode sucessfull updated!"
