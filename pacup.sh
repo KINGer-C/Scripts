@@ -17,7 +17,7 @@ mv -v ~/pacglobal-035d4df02-lin64/pacglobald ~/PACGlobal
 mv -v ~/pacglobal-035d4df02-lin64/pacglobal-cli ~/PACGlobal 
 mv -v ~/pacglobal-035d4df02-lin64/pacglobal-tx ~/PACGlobal
 mv -v ~/pacglobal-035d4df02-lin64/pacglobal-qt ~/PACGlobal
-sudo chmod +x ~PACGlobal/pacglobal*
+sudo chmod +x ~/PACGlobal/pacglobal*
 rm -rf pacglobal-035d4df02-lin64.tgz
 rm -rf pacglobal-035d4df02-lin64
 sleep 3s
