@@ -23,3 +23,4 @@ sleep 3s
 echo "Starting wallet"
 cd ~/PACGlobal && ./pacglobald -daemon
 echo "Masternode sucessfull updated!"
+rm -rf pacup.sh
