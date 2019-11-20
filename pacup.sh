@@ -22,6 +22,8 @@ cd ~ && rm -rf pacglobal-035d4df02-lin64.tgz
 cd ~ && rm -rf pacglobal-035d4df02-lin64
 sleep 3s
 echo "Starting wallet"
-cd ~/PACGlobal && ./pacglobald -daemon
+systemctl enable pacg.service
+systemctl start pacg.service
+cd ~/PACGlobal && ./pacglobald
 echo "Masternode sucessfull updated!"
 rm -rf pacup.sh
