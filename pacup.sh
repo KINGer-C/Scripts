@@ -9,6 +9,7 @@ sleep 5s
 echo "Done!"
 echo "Downloading new wallet"
 mkdir ~/PACGlobal 
+cd ~
 sleep 3s
 wget https://github.com/PACGlobalOfficial/PAC/releases/download/035d4df02/pacglobal-035d4df02-lin64.tgz && chmod -x pacglobal-035d4df02-lin64.tgz && tar -xvzf pacglobal-035d4df02-lin64.tgz
 sleep 5s
