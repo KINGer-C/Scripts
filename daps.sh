@@ -69,6 +69,8 @@ elif [ $choise = 'r6' ]; then
   dapscoin-cli06 -rpcuser=DAPSMN06 -rpcpassword=DAPSMN060 -rpcport=53579 stop && rm -rf .dapscoin06
 elif [ $choise = 'u' ]; then
   sudo apt-get install unzip && sudo apt-get update && sudo apt-get  upgrade -y
+elif [ $choise = 'up' ]; then
+  rm -rf updatev10406.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/updatev10406.sh && chmod 777 updatev10406.sh && bash updatev10406.sh
 elif [ $choise = 'c1' ]; then
   nano /etc/network/interfaces && systemctl restart networking
 elif [ $choise = 'c2' ]; then
