@@ -33,6 +33,7 @@ echo "# s4 - Swap 4Gb memory                        # s6 - Swap 6gb memory      
 echo "# c1 - Configure ipv6 (ubuntu 16)             # c2 - Configure ipv6 (ubuntu 18)   #"
 echo "# i - Get ip information                      # e - exit                          #"
 echo "# o - Only ipv6  - you can ingnore de ipv6 warings about ipv4 pre-instalation     #"
+echo "# up - Update the wallet from 1.0.3.4 to 1.0.4.6 binarys                          #"
 echo "###################################################################################"
 read choise
 clear
