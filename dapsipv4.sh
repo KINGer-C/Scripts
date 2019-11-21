@@ -22,15 +22,15 @@ echo "░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░"
 sleep 3s
 clear
 echo "Downloading latest build..."
-wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.3/master_linux-v1.0.3.4.zip
+wget -N https://github.com/DAPSCoin/DAPSCoin/releases/download/1.0.4/master_linux-v1.0.4.6.zip
 echo "Installing unzip..."
 sudo apt-get install unzip -y
 echo "Unzipping latest zip..."
-sudo unzip -jo master_linux-v1.0.3.4.zip -d /usr/local/bin
+sudo unzip -jo master_linux-v1.0.4.6.zip -d /usr/local/bin
 echo "Giving permissions...."
 sudo chmod +x /usr/local/bin/daps*
 echo "Removing old files"
-rm -rf master_linux-v1.0.3.4.zip
+rm -rf master_linux-v1.0.4.6.zip
 rm -rf ~/.dapscoin/
 echo "Enter your IPV4 for the DAPSMN00"
 read IP
