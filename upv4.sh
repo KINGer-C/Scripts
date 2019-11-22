@@ -5,6 +5,7 @@ echo "########## By KINGer-C ##########"
 echo "#################################"
 clear
 sleep 2s
+clear
 while :
 do
 echo "##############################"
@@ -36,8 +37,8 @@ elif [ $choise = 'u5' ]; then
 elif [ $choise = 'u6' ]; then
  dapscoin-cli06 -rpcuser=DAPSMN06 -rpcpassword=DAPSMN060 -rpcport=53579 stop && sudo cp /usr/local/bin/dapscoind /usr/local/bin/dapscoind06 && sudo cp /usr/local/bin/dapscoin-cli /usr/local/bin/dapscoin-cli06 && sleep 10s && dapscoind06 -datadir=/root/.dapscoin06 -wallet=wallet06.dat
 elif [ $choise = 'e' ]; then
-    rm -rf updatev10406.sh && break
+    rm -rf upv46.sh && break
 else 
   echo "!!!Comand not found !!!"
- fi
+fi
 done
