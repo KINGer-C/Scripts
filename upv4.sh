@@ -39,6 +39,6 @@ elif [ $choise = 'u6' ]; then
 elif [ $choise = 'e' ]; then
     rm -rf upv46.sh && break
 else 
-  echo "!!!Comand not found !!!"
+  echo "!!!Comand not found !!! \n Try Again"
 fi
 done
