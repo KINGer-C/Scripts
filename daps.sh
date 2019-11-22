@@ -70,7 +70,7 @@ elif [ $choise = 'r6' ]; then
 elif [ $choise = 'u' ]; then
   sudo apt-get install unzip && sudo apt-get update && sudo apt-get  upgrade -y
 elif [ $choise = 'up' ]; then
-  rm -rf updatev10406.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/updatev10406.sh && chmod 777 updatev10406.sh && bash updatev10406.sh
+  rm -rf updatev10406.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/upv4.sh && chmod 777 upv4.sh && bash upv4.sh
 elif [ $choise = 'c1' ]; then
   nano /etc/network/interfaces && systemctl restart networking
 elif [ $choise = 'c2' ]; then
