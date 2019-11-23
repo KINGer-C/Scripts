@@ -56,17 +56,17 @@ elif [ $choise = 'o' ]; then
 elif [ $choise = 'r0' ]; then
   dapscoin-cli stop && rm -rf .dapscoin
 elif [ $choise = 'r1' ]; then
-  dapscoin-cli01 -rpcuser=DAPSMN01 -rpcpassword=DAPSMN010 -rpcport=53574 stop && rm -rf .dapscoin01
+  dapscoin-cli01 -rpcuser=DAPSMN01 -rpcpassword=DAPSMN010 -rpcport=53574 stop && sleep 10s && rm -rf .dapscoin01
 elif [ $choise = 'r2' ]; then
-  dapscoin-cli02 -rpcuser=DAPSMN02 -rpcpassword=DAPSMN020 -rpcport=53575 stop && rm -rf .dapscoin02
+  dapscoin-cli02 -rpcuser=DAPSMN02 -rpcpassword=DAPSMN020 -rpcport=53575 stop && sleep 10s && rm -rf .dapscoin02
 elif [ $choise = 'r3' ]; then
-  dapscoin-cli03 -rpcuser=DAPSMN03 -rpcpassword=DAPSMN030 -rpcport=53576 stop && rm -rf .dapscoin03
+  dapscoin-cli03 -rpcuser=DAPSMN03 -rpcpassword=DAPSMN030 -rpcport=53576 stop && sleep 10s && rm -rf .dapscoin03
 elif [ $choise = 'r4' ]; then
-  dapscoin-cli04 -rpcuser=DAPSMN04 -rpcpassword=DAPSMN040 -rpcport=53577 stop && rm -rf .dapscoin04
+  dapscoin-cli04 -rpcuser=DAPSMN04 -rpcpassword=DAPSMN040 -rpcport=53577 stop && sleep 10s && rm -rf .dapscoin04
 elif [ $choise = 'r5' ]; then
-  dapscoin-cli05 -rpcuser=DAPSMN05 -rpcpassword=DAPSMN050 -rpcport=53578 stop && rm -rf .dapscoin05
+  dapscoin-cli05 -rpcuser=DAPSMN05 -rpcpassword=DAPSMN050 -rpcport=53578 stop && sleep 10s && rm -rf .dapscoin05
 elif [ $choise = 'r6' ]; then
-  dapscoin-cli06 -rpcuser=DAPSMN06 -rpcpassword=DAPSMN060 -rpcport=53579 stop && rm -rf .dapscoin06
+  dapscoin-cli06 -rpcuser=DAPSMN06 -rpcpassword=DAPSMN060 -rpcport=53579 stop && sleep 10s && rm -rf .dapscoin06
 elif [ $choise = 'u' ]; then
   sudo apt-get install unzip && sudo apt-get update && sudo apt-get  upgrade -y
 elif [ $choise = 'up' ]; then
