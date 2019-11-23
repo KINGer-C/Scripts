@@ -38,7 +38,7 @@ elif [ $choise = 'u5' ]; then
 elif [ $choise = 'u6' ]; then
  dapscoin-cli06 -rpcuser=DAPSMN06 -rpcpassword=DAPSMN060 -rpcport=53579 stop && sleep 5s && rm -rf /usr/local/bin/dapscoind06 && rm -rf /usr/local/bin/dapscoin-cli06 && sudo cp /usr/local/bin/dapscoind /usr/local/bin/dapscoind06 && sudo cp /usr/local/bin/dapscoin-cli /usr/local/bin/dapscoin-cli06 && sleep 20s && dapscoind06 -datadir=/root/.dapscoin06 -wallet=wallet06.dat && sleep 5s && watch dapscoin-cli06 -rpcuser=DAPSMN06 -rpcpassword=DAPSMN060 -rpcport=53579 getinfo
 elif [ $choise = 're0' ]; then
- daspcoind -daemon && sleep 5s && watch dapscoin-cli getinfo
+ dapscoind -daemon && sleep 5s && watch dapscoin-cli getinfo
 elif [ $choise = 're1' ]; then
  dapscoind01 -datadir=/root/.dapscoin01 -wallet=wallet01.dat && sleep 5s && watch dapscoin-cli01 -rpcuser=DAPSMN01 -rpcpassword=DAPSMN010 -rpcport=53574 getinfo
 elif [ $choise = 're2' ]; then
