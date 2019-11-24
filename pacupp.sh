@@ -15,35 +15,23 @@ sleep 10s
 echo "DONE"
 cd ~
 echo "Deleting PACGlobal files"
-sudo rm -rf PACGblobal
+rm -rf ~/PACGblobal
 sleep 10s
 echo "DONE"
 echo "Stoping pacg.service"
-sudo systemctl stop pacg.service
+systemctl stop pacg.service
 sleep 5s
 echo "DONE"
 echo "Disabling pacg.service"
-sudo systemctl disable pacg.service
+systemctl disable pacg.service
 sleep 5s
 echo "DONE"
 echo "Deleting pacg.service"
-sudo rm -rf /etc/systemd/system/pacg.service
+rm -rf /etc/systemd/system/pacg.service
 sleep 7s
 echo "DONE"
-echo "Removing old files, please wait 60 seconds"
-cd ~/PACGlobal && rm -rf backups
-sleep 6s
-cd ~/PACGlobal && rm -rf blocks 
-#cd ~/PACGlobal && rm -rf database  
-#cd ~/PACGlobal && rm -rf debug.log 
-#cd ~/PACGlobal && rm -rf llmq 
-#cd ~/PACGlobal && rm -rf pacglobal.pid 
-#cd ~/PACGlobal && rm -rf wallet.dat 
-#cd ~/PACGlobal && rm -rf banlist.dat  
-#cd ~/PACGlobal && rm -rf chainstate  
-#cd ~/PACGlobal && rm -rf db.log 
-#cd ~/PACGlobal && rm -rf evodb 
-sleep 60s
+#echo "Removing old files, please wait 60 seconds"
+#sleep 60s
 cd ~
 echo "DONE"
 echo ""
