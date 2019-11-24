@@ -1,9 +1,6 @@
 #!/bin/bash
 
 set -e
-
-export LC_ALL="en_US.UTF-8"
-
 binary_url="https://github.com/PACGlobalOfficial/PAC/releases/download/8f4ed61d4/pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz"
 file_name="pacglobal-v0.14.0.4-8f4ed61d4-lin64"
 extension=".tgz"
@@ -12,21 +9,27 @@ echo ""
 echo "#################################################"
 echo "#   Welcome to the PACGlobal Masternode Setup   #"
 echo "#################################################"
-echo ""
+echo " Stoping wallet"
 cd ~/PACGlobal && ./pacglobal-cli stop
-systemctl stop pacg.service
-systemctl disable pacg.service
-cd ~/PACGlobal && rm -rf backups && rm -rf blocks && rm -rf database  && rm -rf debug.log  && rm -rf llmq  && rm -rf pacglobal.pid && rm -rf wallet.dat && rm -rf banlist.dat  && rm -rf chainstate  && rm -rf db.log && rm -rf evodb && rm -rf peers.dat
 sleep 10s
+echo "Stoping pacg.service"
+sudo systemctl stop pacg.service
+sleep 5s
+echo "Disabling pacg.service"
+sudo systemctl disable pacg.service
+sleep 5s
+echo "Deleting pacg.setvice"
+sudo rm -rf /etc/systemd/system/pacg.service
+sleep 5s
+echo "Removing old files, please wait 60 seconds"
+cd ~/PACGlobal && rm -rf backups && rm -rf blocks && rm -rf database  && rm -rf debug.log  && rm -rf llmq  && rm -rf pacglobal.pid && rm -rf wallet.dat && rm -rf banlist.dat  && rm -rf chainstate  && rm -rf db.log && rm -rf evodb && rm -rf peers.dat
+sleep 60s
 echo ""
 echo "###############################"
 echo "#  Installing Dependencies    #"
 echo "###############################"
 echo ""
-echo "Running this script on Ubuntu 18.04 LTS or newer is highly recommended."
-
 sudo apt-get -y install git python virtualenv ufw pwgen
-
 echo ""
 echo "###############################"
 echo "#   Setting up the Firewall   #"
