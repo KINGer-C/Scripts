@@ -12,7 +12,7 @@ echo "#################################################"
 echo " Stoping wallet"
 cd ~/PACGlobal && ./pacglobal-cli stop
 sleep 10s
-Echo "DONE"
+echo "DONE"
 echo "Deleting PACGlobal files"
 sudo rm -rf PACGblobal
 sleep 10s
@@ -20,19 +20,19 @@ echo "DONE"
 echo "Stoping pacg.service"
 sudo systemctl stop pacg.service
 sleep 5s
-Echo "DONE"
+echo "DONE"
 echo "Disabling pacg.service"
 sudo systemctl disable pacg.service
 sleep 5s
-Echo "DONE"
+echo "DONE"
 echo "Deleting pacg.service"
 sudo rm -rf /etc/systemd/system/pacg.service
 sleep 5s
-Echo "DONE"
+echo "DONE"
 echo "Removing old files, please wait 60 seconds"
 cd ~/PACGlobal && rm -rf backups && rm -rf blocks && rm -rf database  && rm -rf debug.log  && rm -rf llmq  && rm -rf pacglobal.pid && rm -rf wallet.dat && rm -rf banlist.dat  && rm -rf chainstate  && rm -rf db.log && rm -rf evodb && rm -rf peers.dat
 sleep 60s
-Echo "DONE"
+echo "DONE"
 echo ""
 echo "###############################"
 echo "#  Installing Dependencies    #"
