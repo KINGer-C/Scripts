@@ -13,6 +13,10 @@ echo " Stoping wallet"
 cd ~/PACGlobal && ./pacglobal-cli stop
 sleep 10s
 Echo "DONE"
+echo "Deleting PACGlobal files"
+sudo rm -rf PACGblobal
+sleep 10s
+echo "DONE"
 echo "Stoping pacg.service"
 sudo systemctl stop pacg.service
 sleep 5s
