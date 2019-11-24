@@ -31,7 +31,18 @@ sudo rm -rf /etc/systemd/system/pacg.service
 sleep 7s
 echo "DONE"
 echo "Removing old files, please wait 60 seconds"
-cd ~/PACGlobal && rm -rf backups && rm -rf blocks && rm -rf database  && rm -rf debug.log  && rm -rf llmq  && rm -rf pacglobal.pid && rm -rf wallet.dat && rm -rf banlist.dat  && rm -rf chainstate  && rm -rf db.log && rm -rf evodb && rm -rf peers.dat
+cd ~/PACGlobal && rm -rf backups
+sleep 6s
+cd ~/PACGlobal && rm -rf blocks 
+#cd ~/PACGlobal && rm -rf database  
+#cd ~/PACGlobal && rm -rf debug.log 
+#cd ~/PACGlobal && rm -rf llmq 
+#cd ~/PACGlobal && rm -rf pacglobal.pid 
+#cd ~/PACGlobal && rm -rf wallet.dat 
+#cd ~/PACGlobal && rm -rf banlist.dat  
+#cd ~/PACGlobal && rm -rf chainstate  
+#cd ~/PACGlobal && rm -rf db.log 
+#cd ~/PACGlobal && rm -rf evodb 
 sleep 60s
 cd ~
 echo "DONE"
