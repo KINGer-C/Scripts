@@ -27,7 +27,7 @@ sleep 5s
 echo "DONE"
 echo "Deleting pacg.service"
 sudo rm -rf /etc/systemd/system/pacg.service
-sleep 5s
+sleep 7s
 echo "DONE"
 echo "Removing old files, please wait 60 seconds"
 cd ~/PACGlobal && rm -rf backups && rm -rf blocks && rm -rf database  && rm -rf debug.log  && rm -rf llmq  && rm -rf pacglobal.pid && rm -rf wallet.dat && rm -rf banlist.dat  && rm -rf chainstate  && rm -rf db.log && rm -rf evodb && rm -rf peers.dat
