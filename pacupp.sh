@@ -46,29 +46,25 @@ sudo iptables -A INPUT -p tcp --dport 7112 -j ACCEPT
 rm -rf PACGblobal
 sleep 10s
 set -e
-binary_url="https://github.com/PACGlobalOfficial/PAC/releases/download/8f4ed61d4/pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz"
-file_name="pacglobal-v0.14.0.4-8f4ed61d4-lin64"
-extension=".tgz"
+cd ~
+wget https://github.com/PACGlobalOfficial/PAC/releases/download/8f4ed61d4/pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz
 echo ""
 echo "###############################"
 echo "#      Get/Setup binaries     #"
 echo "###############################"
 echo ""
-wget $binary_url
-if test -e "$file_name$extension"; then
-echo "Unpacking PACGlobal distribution"
-	tar -xzvf $file_name$extension
-	rm -r $file_name$extension
-	mv -v $file_name PACGlobal
-	cd PACGlobal
+tar -xzvf https://github.com/PACGlobalOfficial/PAC/releases/download/8f4ed61d4/pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz
+rm -rf pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz
+mv -vf $file_name PACGlobal
+cd PACGlobal
 	chmod +x pacglobald
 	chmod +x pacglobal-cli
-	echo "Binaries were saved to: /root/PACGlobal"
+echo "Binaries were saved to: /root/PACGlobal"
 else
 	echo "There was a problem downloading the binaries, please try running the script again."
 	exit -1
 fi
-
+cd ~
 echo ""
 echo "#######################################"
 echo "#      Creating systemctl service     #"
