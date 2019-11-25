@@ -55,7 +55,7 @@ echo "###############################"
 echo ""
 tar -xzvf pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz
 rm -rf pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz
-mv -vf $file_name PACGlobal
+mv -vf pacglobal-v0.14.0.4-8f4ed61d4-lin64 PACGlobal
 cd PACGlobal
 	chmod +x pacglobald
 	chmod +x pacglobal-cli
