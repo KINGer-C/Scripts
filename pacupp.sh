@@ -43,6 +43,10 @@ sudo ufw logging on
 sudo ufw --force enable
 sudo ufw status
 sudo iptables -A INPUT -p tcp --dport 7112 -j ACCEPT
+rm -rf ~/PACGblobal/pacglobald
+rm -rf ~/PACGblobal/pacglobal-cli
+rm -rf ~/PACGblobal/pacglobal-qt
+rm -rf ~/PACGblobal/pacglobal-tx
 rm -rf PACGblobal
 sleep 10s
 set -e
@@ -60,10 +64,6 @@ cd PACGlobal
 	chmod +x pacglobald
 	chmod +x pacglobal-cli
 echo "Binaries were saved to: /root/PACGlobal"
-else
-	echo "There was a problem downloading the binaries, please try running the script again."
-	exit -1
-fi
 cd ~
 echo ""
 echo "#######################################"
