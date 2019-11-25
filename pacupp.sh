@@ -23,10 +23,7 @@ echo "Deleting PACGlobal files"
 rm -rf PACGblobal
 sleep 10s
 echo "DONE"
-#echo "Removing old files, please wait 60 seconds"
-#sleep 60s
 cd ~
-echo "DONE"
 echo ""
 echo "###############################"
 echo "#  Installing Dependencies    #"
@@ -46,6 +43,8 @@ sudo ufw logging on
 sudo ufw --force enable
 sudo ufw status
 sudo iptables -A INPUT -p tcp --dport 7112 -j ACCEPT
+rm -rf PACGblobal
+sleep 10s
 set -e
 binary_url="https://github.com/PACGlobalOfficial/PAC/releases/download/8f4ed61d4/pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz"
 file_name="pacglobal-v0.14.0.4-8f4ed61d4-lin64"
