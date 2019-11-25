@@ -53,7 +53,7 @@ echo "###############################"
 echo "#      Get/Setup binaries     #"
 echo "###############################"
 echo ""
-tar -xzvf https://github.com/PACGlobalOfficial/PAC/releases/download/8f4ed61d4/pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz
+tar -xzvf pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz
 rm -rf pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz
 mv -vf $file_name PACGlobal
 cd PACGlobal
