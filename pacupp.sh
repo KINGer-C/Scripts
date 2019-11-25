@@ -1,23 +1,12 @@
-#!/bin/bash
-
-set -e
-binary_url="https://github.com/PACGlobalOfficial/PAC/releases/download/8f4ed61d4/pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz"
-file_name="pacglobal-v0.14.0.4-8f4ed61d4-lin64"
-extension=".tgz"
-
 echo ""
 echo "#################################################"
-echo "#   Welcome to the PACGlobal Masternode Setup   #"
+echo "#   Welcome to the PACGlobal Masternode update  #"
 echo "#################################################"
 echo " Stoping wallet"
 cd ~/PACGlobal && ./pacglobal-cli stop
 sleep 10s
 echo "DONE"
 cd ~
-echo "Deleting PACGlobal files"
-rm -rf ~/PACGblobal
-sleep 10s
-echo "DONE"
 echo "Stoping pacg.service"
 systemctl stop pacg.service
 sleep 5s
@@ -29,6 +18,10 @@ echo "DONE"
 echo "Deleting pacg.service"
 rm -rf /etc/systemd/system/pacg.service
 sleep 7s
+echo "DONE"
+echo "Deleting PACGlobal files"
+rm -rf PACGblobal
+sleep 10s
 echo "DONE"
 #echo "Removing old files, please wait 60 seconds"
 #sleep 60s
@@ -53,7 +46,10 @@ sudo ufw logging on
 sudo ufw --force enable
 sudo ufw status
 sudo iptables -A INPUT -p tcp --dport 7112 -j ACCEPT
-
+set -e
+binary_url="https://github.com/PACGlobalOfficial/PAC/releases/download/8f4ed61d4/pacglobal-v0.14.0.4-8f4ed61d4-lin64.tgz"
+file_name="pacglobal-v0.14.0.4-8f4ed61d4-lin64"
+extension=".tgz"
 echo ""
 echo "###############################"
 echo "#      Get/Setup binaries     #"
