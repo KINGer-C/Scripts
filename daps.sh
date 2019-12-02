@@ -34,6 +34,7 @@ echo "# c1 - Configure ipv6 (ubuntu 16)             # c2 - Configure ipv6 (ubunt
 echo "# i - Get ip information                      # e - exit                          #"
 echo "# o - Only ipv6  - you can ingnore de ipv6 warings about ipv4 pre-instalation     #"
 echo "# up - Update the wallet from 1.0.3.4 to 1.0.4.6 binarys                          #"
+echo "# at - Download the masternodes shortcuts ( recomended once)                      #"
 echo "###################################################################################"
 read choise
 clear
@@ -85,6 +86,8 @@ elif [ $choise = 's2' ]; then
   sudo fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
 elif [ $choise = 's6' ]; then
   sudo fallocate -l 6G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
+elif [ $choise = 'at' ]; then
+  wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/.bash_aliases && source ~/.bashrc
 else
   echo "Command not found, please restart the instalation"
 fi
