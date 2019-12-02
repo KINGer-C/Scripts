@@ -57,15 +57,18 @@ echo "masternodeaddr=[$IP]:53572" >> $CONF_DIR/$CONF_FILE
 echo "masternodeprivkey=$PRIVKEY" >> $CONF_DIR/$CONF_FILE
 echo "datadir=/root/.dapscoin03" >> $CONF_DIR/$CONF_FILE
 echo "wallet=wallet03.dat" >> $CONF_DIR/$CONF_FILE
-echo "addnode=80.79.194.69:53572" >> $CONF_DIR/$CONF_FILE
-echo "addnode=212.237.7.86:53572" >> $CONF_DIR/$CONF_FILE
-echo "addnode=95.216.152.41:53572" >> $CONF_DIR/$CONF_FILE
-echo "addnode=144.202.20.83:53572" >> $CONF_DIR/$CONF_FILE
-echo "addnode=51.158.190.147:53572" >> $CONF_DIR/$CONF_FILE
-echo "addnode=159.203.169.82:53572" >> $CONF_DIR/$CONF_FILE
-echo "addnode=51.158.173.129:53572" >> $CONF_DIR/$CONF_FILE
-echo "addnode=80.211.15.156:53572" >> $CONF_DIR/$CONF_FILE
-echo "addnode=51.15.98.244:53572" >> $CONF_DIR/$CONF_FILE
+echo "addnode=95.216.252.153:34536" >> $CONF_DIR/$CONF_FILE
+echo "addnode=95.216.84.192:37912" >> $CONF_DIR/$CONF_FILE
+echo "addnode=95.217.98.226:40586" >> $CONF_DIR/$CONF_FILE
+echo "addnode=95.217.70.158:50228" >> $CONF_DIR/$CONF_FILE
+echo "addnode=95.217.70.41:38154" >> $CONF_DIR/$CONF_FILE
+echo "addnode=95.216.253.172:48176" >> $CONF_DIR/$CONF_FILE
+echo "addnode=113.234.221.75:52758" >> $CONF_DIR/$CONF_FILE
+echo "addnode=220.214.11.115:64211" >> $CONF_DIR/$CONF_FILE
+echo "addnode=77.161.105.40:55110" >> $CONF_DIR/$CONF_FILE
+echo "addnode=89.40.9.159:52800" >> $CONF_DIR/$CONF_FILE
+echo "addnode=86.157.160.160:53572" >> $CONF_DIR/$CONF_FILE
+echo "addnode=95.216.94.80:39740" >> $CONF_DIR/$CONF_FILE
 
 sudo apt-get install fail2ban -y
 sudo ufw allow ssh
