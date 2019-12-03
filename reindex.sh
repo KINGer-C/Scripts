@@ -1,17 +1,17 @@
 while :
 do
-echo "####################################################"
-echo "#                WHAT DO YOU WANNA DO?             #"
-echo "####################################################"
-echo "# rx0 - REINDEX the IPV4 DAPSMN00 - .dapscoin      #"
-echo "# rx1 - REINDEX  the IPV6 DAPSMN01 - .dapscoin01   #"
-echo "# rx2 - REINDEX  the IPV6 DAPSMN02 - .dapscoin02   #"
-echo "# rx3 - REINDEX  the IPV6 DAPSMN03 - .dapscoin03   #"
-echo "# rx4 - REINDEX  the IPV6 DAPSMN04 - .dapscoin04   #"
-echo "# rx5 - REINDEX  the IPV6 DAPSMN05 - .dapscoin05   #"
-echo "# rx6 - REINDEX  the IPV6 DAPSMN06 - .dapscoin06   #"
-echo "# e - exit                                         #"
-echo "####################################################"
+echo "###########################################################################"
+echo "#                             WHAT DO YOU WANNA DO?                       #"
+echo "###########################################################################"
+echo "# rx0 - REINDEX the IPV4 DAPSMN00 - .dapscoin     # ck0 - Check DAPSMN00  #"
+echo "# rx1 - REINDEX  the IPV6 DAPSMN01 - .dapscoin01  # ck1 - Check DAPSMN01  #"
+echo "# rx2 - REINDEX  the IPV6 DAPSMN02 - .dapscoin02  # ck2 - Check DAPSMN02  #"
+echo "# rx3 - REINDEX  the IPV6 DAPSMN03 - .dapscoin03  # ck3 - Check DAPSMN03  #"
+echo "# rx4 - REINDEX  the IPV6 DAPSMN04 - .dapscoin04  # ck4 - Check DAPSMN04  #"
+echo "# rx5 - REINDEX  the IPV6 DAPSMN05 - .dapscoin05  # ck5 - Check DAPSMN05  #"
+echo "# rx6 - REINDEX  the IPV6 DAPSMN06 - .dapscoin06  # ck6 - Check DAPSMN06  #"
+echo "# e - exit                                                                #"
+echo "###########################################################################"
 read choise
 clear
 if [ $choise = 'rx0' ]; then
@@ -30,6 +30,20 @@ elif [ $choise = 'rx6' ]; then
   dapscoin-cli06 -rpcuser=DAPSMN06 -rpcpassword=DAPSMN060 -rpcport=53579 stop && sleep 10s && dapscoind06 -datadir=/root/.dapscoin06 -wallet=wallet06.dat -reindex && sleep 10s && watch dapscoin-cli06 -rpcuser=DAPSMN06 -rpcpassword=DAPSMN060 -rpcport=53579 getinfo
 elif [ $choise = 'e' ]; then
   rm -rf reindex.sh && break
+elif [ $choise = 'ck0' ]; then
+  watch dapscoin-cli getinfo
+elif [ $choise = 'ck1' ]; then
+  watch watch dapscoin-cli01 -rpcuser=DAPSMN01 -rpcpassword=DAPSMN010 -rpcport=53574 getinfo
+elif [ $choise = 'ck2' ]; then
+  watch watch dapscoin-cli02 -rpcuser=DAPSMN02 -rpcpassword=DAPSMN020 -rpcport=53575 getinfo
+elif [ $choise = 'ck3' ]; then
+  watch watch dapscoin-cli03 -rpcuser=DAPSMN03 -rpcpassword=DAPSMN030 -rpcport=53576 getinfo
+elif [ $choise = 'ck4' ]; then
+  watch watch dapscoin-cli04 -rpcuser=DAPSMN04 -rpcpassword=DAPSMN040 -rpcport=53577 getinfo
+elif [ $choise = 'ck5' ]; then
+  watch watch dapscoin-cli05 -rpcuser=DAPSMN05 -rpcpassword=DAPSMN050 -rpcport=53578 getinfo
+elif [ $choise = 'ck6' ]; then
+  watch watch dapscoin-cli06 -rpcuser=DAPSMN06 -rpcpassword=DAPSMN060 -rpcport=53579 getinfo
 else 
   echo "Command not found, Please try Again !" && sleep 3s && clear
 fi
