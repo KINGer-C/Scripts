@@ -29,7 +29,7 @@ elif [ $choise = 'rx5' ]; then
 elif [ $choise = 'rx6' ]; then
   stop06 && sleep 10s && start06 -reindex && sleep 10s && watch getinfo06
 elif [ $choise = 'e' ]; then
-    reindex.sh && break
+   rm -rf reindex.sh && break
 else 
   echo "Command not found, Please try Again !" && sleep 3s
 fi
