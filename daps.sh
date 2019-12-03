@@ -32,10 +32,10 @@ echo "# u - update and upgrade ( recomended once)   # s2 - swap 2Gb memory      
 echo "# s4 - Swap 4Gb memory                        # s6 - Swap 6gb memory              #"
 echo "# c1 - Configure ipv6 (ubuntu 16)             # c2 - Configure ipv6 (ubuntu 18)   #"
 echo "# i - Get ip information                      # e - exit                          #"
+echo "# rx - Renidex the wallets                    # bst - boostrap                    #"
 echo "# o - Only ipv6  - you can ingnore de ipv6 warings about ipv4 pre-instalation     #"
 echo "# up - Update the wallet from 1.0.3.4 to 1.0.4.6 binarys                          #"
 echo "# at - Download the masternodes shortcuts ( recomended once)                      #"
-echo "# rx - Renidex the wallets                                                        #"
 echo "###################################################################################"
 read choise
 clear
@@ -91,6 +91,8 @@ elif [ $choise = 'at' ]; then
   wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/.bash_aliases && source ~/.bashrc
 elif [ $choise = 'rx' ]; then
   rm -rf reindex.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/reindex.sh && chmod 777 reindex.sh && bash reindex.sh
+elif [ $choise = 'bst' ]; then
+  rm -rf boost.sh && https://raw.githubusercontent.com/KINGer-C/Scripts/master/boost.sh && chmod 777 boost.sh && bash boost.sh
 else
   echo "Command not found, please restart the instalation"
 fi
