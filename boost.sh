@@ -19,7 +19,7 @@ clear
 if [ $choise = 'dw' ]; then
   wget https://github.com/KINGer-C/Scripts/releases/download/blocks/blocks.zip && unzip blocks.zip && rm -rf blocks.zip
 elif [ $choise = 'b0' ]; then
-  dapscoin-cli stop && sleep 10s && rm -rf ~/.dapscoin/blocks ~/.dapscoin/chainstate ~/.dapscoin/database ~/.dapscoin/.lock ~/.dapscoin/dapscoind.pid && sleep 30s &&  cp -R ~/blocks ~/.dapscoin && sleep 20s && dapscoin -daemon && sleep 10s && watch dapscoin-cli getinfo
+  dapscoin-cli stop && sleep 10s && rm -rf ~/.dapscoin/blocks ~/.dapscoin/chainstate ~/.dapscoin/database ~/.dapscoin/.lock ~/.dapscoin/dapscoind.pid && sleep 30s &&  cp -R ~/blocks ~/.dapscoin && sleep 20s && dapscoind -daemon && sleep 10s && watch dapscoin-cli getinfo
 elif [ $choise = 'b1' ]; then
   dapscoin-cli01 -rpcuser=DAPSMN01 -rpcpassword=DAPSMN010 -rpcport=53574 stop && sleep 10s && rm -rf ~/.dapscoin01/blocks ~/.dapscoin01/chainstate ~/.dapscoin01/database ~/.dapscoin01/.lock ~/.dapscoin01/dapscoind.pid && sleep 20s && cp -R ~/blocks ~/.dapscoin01 && sleep 30s && dapscoind01 -datadir=/root/.dapscoin01 -wallet=wallet01.dat && sleep 10s && watch dapscoin-cli01 -rpcuser=DAPSMN01 -rpcpassword=DAPSMN010 -rpcport=53574 getinfo
 elif [ $choise = 'b2' ]; then
