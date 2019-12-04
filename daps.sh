@@ -92,7 +92,7 @@ elif [ $choise = 'at' ]; then
 elif [ $choise = 'rx' ]; then
   rm -rf reindex.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/reindex.sh && chmod 777 reindex.sh && bash reindex.sh
 elif [ $choise = 'bst' ]; then
-  rm -rf boost.sh && https://raw.githubusercontent.com/KINGer-C/Scripts/master/boost.sh && chmod 777 boost.sh && bash boost.sh
+  rm -rf boost.sh && wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/boost.sh && chmod 777 boost.sh && bash boost.sh
 else
   echo "Command not found, please restart the instalation"
 fi
