@@ -17,7 +17,7 @@ echo "######################################"
 read choise
 clear
 if [ $choise = 'dw' ]; then
-  wget https://github.com/KINGer-C/Scripts/releases/download/blocks/blocks.zip && unzip blocks.zip && rm -rf blocks.zip
+  wget -N https://github.com/KINGer-C/Scripts/releases/download/blocks/blocks.zip && unzip blocks.zip && rm -rf blocks.zip
 elif [ $choise = 'b0' ]; then
   dapscoin-cli stop && sleep 10s && rm -rf ~/.dapscoin/blocks ~/.dapscoin/chainstate ~/.dapscoin/database ~/.dapscoin/.lock ~/.dapscoin/dapscoind.pid && sleep 30s &&  cp -R ~/blocks ~/.dapscoin && sleep 20s && dapscoind -daemon && sleep 10s && watch dapscoin-cli getinfo
 elif [ $choise = 'b1' ]; then
