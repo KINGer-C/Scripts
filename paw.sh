@@ -23,14 +23,15 @@ sleep 3s
 clear
 echo "###################################################################################"
 echo "#                          WHAT IS YOUR UBUNTU VERSION                            #"
-echo "#                    Type -> 16 <- to Ubuntu 16 release                           #'
-echo '#                    Type -> 18 <- to Ubuntu 18 resease                           #"
+echo "#                    Type -> 16 <- to Ubuntu 16 release                           #"
+echo "#                    Type -> 18 <- to Ubuntu 18 resease                           #"
 echo "###################################################################################"
 read choise
 clear
 echo "Downloading latest build..."
+sleep 1s
 echo " The Default directory is /usr/local/bin"
-sleep 2s
+sleep 1s
 if [ $choise = '16' ]; then
   wget https://github.com/PawcoinNew/Pawcoin/releases/download/1.0/Pawcoinv1.0-Ubuntu16.tar.gz && sudo tar xvzf Pawcoinv1.0-Ubuntu16.tar.gz -C /usr/local/bin && sudo chmod +x /usr/local/bin/pawcoin*
 elif [ $choise = '18' ]; then
@@ -39,13 +40,15 @@ else
   echo "That is not a valid option, Please try again" 
   exit -1
 fi
+sleep 1s
 echo "done"
-sleep 2s
+sleep 1s
 clear 
 echo "Removing old files...."
 rm -rf Pawcoinv1.0-Ubuntu16.tar.gz Pawcoinv1.0-Ubuntu18.tar.gz
+sleep 1s
 echo "done"
-sleep 2s
+sleep 1s
 clear
 while :
 do
@@ -73,8 +76,9 @@ fi
 done
 echo "Removing old directories"
 rm -rf ~/.pawcoin/
+sleep 1s
 echo "done"
-sleep 2s
+sleep 1s
 clear
 echo "Enter your IPV4 for the PAWCOIN MASTER NODE"
 read IP
