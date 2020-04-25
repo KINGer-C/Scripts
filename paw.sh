@@ -23,12 +23,14 @@ sleep 3s
 clear
 echo "###################################################################################"
 echo "#                          WHAT IS YOUR UBUNTU VERSION                            #"
-echo "#                    Type 16 to Ubuntu 16 or 18 to Ubuntu 18                      #"
+echo "#                    Type -> 16 <- to Ubuntu 16 release                           #'
+echo '#                    Type -> 18 <- to Ubuntu 18 resease                           #"
 echo "###################################################################################"
 read choise
 clear
 echo "Downloading latest build..."
-
+echo " The Default directory is /usr/local/bin"
+sleep 2s
 if [ $choise = '16' ]; then
   wget https://github.com/PawcoinNew/Pawcoin/releases/download/1.0/Pawcoinv1.0-Ubuntu16.tar.gz && sudo tar xvzf Pawcoinv1.0-Ubuntu16.tar.gz -C /usr/local/bin && sudo chmod +x /usr/local/bin/pawcoin*
 elif [ $choise = '18' ]; then
@@ -37,11 +39,43 @@ else
   echo "That is not a valid option, Please try again" 
   exit -1
 fi
-
-echo "Giving permissions...."
-echo "Removing old files"
+echo "done"
+sleep 2s
+clear 
+echo "Removing old files...."
 rm -rf Pawcoinv1.0-Ubuntu16.tar.gz Pawcoinv1.0-Ubuntu18.tar.gz
+echo "done"
+sleep 2s
+clear
+while :
+do
+echo "###################################################################################"
+echo "#                                WHAT DO YOU WANNA DO?                            #"
+echo "###################################################################################"
+echo "# u - update and upgrade ( recomended once)   # s2 - swap 2Gb memory              #"
+echo "# s4 - Swap 4Gb memory                        # s6 - Swap 6gb memory              #"
+echo "# i - Get ip information                      # c - Continue instalation          #"
+echo "###################################################################################"
+read option
+if [ $choise = 'u' ]; then
+  sudo apt-get install unzip && sudo apt-get update && sudo apt-get  upgrade -y
+elif [ $option = 's4' ]; then
+  sudo fallocate -l 4G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
+elif [ $option = 's2' ]; then
+  sudo fallocate -l 2G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
+elif [ $option = 's6' ]; then
+  sudo fallocate -l 6G /swapfile && chmod 600 /swapfile && mkswap /swapfile && swapon /swapfile && echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
+elif [ $option = 'c' ]; then
+     break
+elif [ $option = 'i' ]; then
+  ifconfig
+fi
+done
+echo "Removing old directories"
 rm -rf ~/.pawcoin/
+echo "done"
+sleep 2s
+clear
 echo "Enter your IPV4 for the PAWCOIN MASTER NODE"
 read IP
 echo "Enter your masternode private key for node"
