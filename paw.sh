@@ -33,7 +33,9 @@ if [ $choise = '16' ]; then
 elif [ $choise = '18' ]; then
   wget -N https://github.com/PawcoinNew/Pawcoin/releases/download/1.0/Pawcoinv1.0.Ubuntu18.tar.gz && sudo tar xvzf Pawcoinv1.0.Ubuntu18.tar.gz -C /usr/local/bin && sudo chmod +x /usr/local/bin/pawcoin*
 else
-  echo "That is not a valid option, Please try again " && exit
+  echo "That is not a valid option, Please try again" 
+  exit
+  fi
 echo "Giving permissions...."
 echo "Removing old files"
 rm -rf Pawcoinv1.0-Ubuntu16.tar.gz Pawcoinv1.0-Ubuntu18.tar.gz
