@@ -28,9 +28,9 @@ echo "##########################################################################
 read choise
 clear
 echo "Downloading latest build..."
-if [ $choise = '16' ]; then
+if [ $choise = 16 ]; then
   wget -N https://github.com/PawcoinNew/Pawcoin/releases/download/1.0/Pawcoinv1.0-Ubuntu16.tar.gz && sudo tar xvzf Pawcoinv1.0-Ubuntu16.tar.gz -C /usr/local/bin && sudo chmod +x /usr/local/bin/pawcoin*
-elif [ $choise = '18' ]; then
+elif [ $choise = 18 ]; then
   wget -N https://github.com/PawcoinNew/Pawcoin/releases/download/1.0/Pawcoinv1.0.Ubuntu18.tar.gz && sudo tar xvzf Pawcoinv1.0.Ubuntu18.tar.gz -C /usr/local/bin && sudo chmod +x /usr/local/bin/pawcoin*
 else
   echo "That is not a valid option, Please try again " && exit
