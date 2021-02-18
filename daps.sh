@@ -4,13 +4,6 @@ echo "### DAPS MASTERNODE EASY WAY ####"
 echo "########## By KINGer-C ##########"
 echo "#################################"
 sleep 2s
-rm -rf dapsipv4.sh
-rm -rf dapsipv61_DAPSMN01.sh
-rm -rf dapsipv61_DAPSMN02.sh
-rm -rf dapsipv61_DAPSMN03.sh
-rm -rf dapsipv61_DAPSMN04.sh
-rm -rf dapsipv61_DAPSMN05.sh
-rm -rf dapsipv61_DAPSMN06.sh
 clear
 sleep 2s
 clear
@@ -21,13 +14,8 @@ ls -a
 echo "###################################################################################"
 echo "#                                WHAT DO YOU WANNA DO?                            #"
 echo "###################################################################################"
-echo "# 0 - Install the IPV4 DAPSMN00 - .dapscoin   # r0 - Uninstall the IPV4 DAPSMN00  #"
-echo "# 1 - Install the IPV6 DAPSMN01 - .dapscoin01 # r1 - Uninstall the IPV6 DAPSMN01  #"
-echo "# 2 - Install the IPV6 DAPSMN02 - .dapscoin02 # r2 - Uninstall the IPV6 DAPSMN02  #"
-echo "# 3 - Install the IPV6 DAPSMN03 - .dapscoin03 # r3 - Uninstall the IPV6 DAPSMN03  #"
-echo "# 4 - Install the IPV6 DAPSMN04 - .dapscoin04 # r4 - Uninstall the IPV6 DAPSMN04  #"
-echo "# 5 - Install the IPV6 DAPSMN05 - .dapscoin05 # r5 - Uninstall the IPV6 DAPSMN05  #"
-echo "# 6 - Install the IPV6 DAPSMN06 - .dapscoin06 # r6 - Uninstall the IPV6 DAPSMN06  #"
+echo "# 0 - Install the IPV4 DAPSMN                 # r0 - Uninstall the IPV4 DAPSMN00  #"
+echo "# 1 - Install the IPV6 DAPSMN_XX              # r1 - Uninstall the IPV6 DAPSMN_XX #"
 echo "# u - update and upgrade ( recomended once)   # s2 - swap 2Gb memory              #"
 echo "# s4 - Swap 4Gb memory                        # s6 - Swap 6gb memory              #"
 echo "# c1 - Configure ipv6 (ubuntu 16)             # c2 - Configure ipv6 (ubuntu 18)   #"
