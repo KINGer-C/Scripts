@@ -11,21 +11,35 @@ INV='\e[7m'
 B_RED='\e[41m'
 B_WHITE='\e[107m'
 clear
-echo -e "░░░░░▄▄▀▀▀▀▀▀▀▀▀▄▄░░░░░"
-echo -e "░░░░█░░░░░░░░░░░░░█░░░░"
-echo -e "░░░█░░░░░░░░░░${RED}▄▄▄${NC}░░█░░░"
-echo -e "░░░█░░${RED}▄▄▄${NC}░░▄░░${RED}███${NC}░░█░░░"
-echo -e "░░░▄█░▄░░░▀▀▀░░░▄░█▄░░░"
-echo -e "░░░█░░▀█▀█▀█▀█▀█▀░░█░░░"
-echo -e "░░░▄██▄▄▀▀▀▀▀▀▀▄▄██▄░░░"
-echo -e "░▄█░█▀▀█▀▀▀█▀▀▀█▀▀█░█▄░"
-echo -e "▄▀░▄▄▀▄▄▀▀▀▄▀▀▀▄▄▀▄▄░▀▄"
-echo -e "█░░░░▀▄░█▄░░░▄█░▄▀░░░░█"
-echo -e "░▀▄▄░█░░█▄▄▄▄▄█░░█░▄▄▀░"
-echo -e "░░░▀██▄▄███████▄▄██▀░░░"
-echo -e "░░░████████▀████████░░░"
-echo -e "░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░░"
-echo -e "░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░"
+k=1
+while [ $k -le 10 ]
+ do
+  if [ $k % 2 == 0  ] ; then
+    echo - e "${INV}"
+  else 
+    echo - e "${B_RED}"
+  fi
+
+  echo -e "░░░░░▄▄▀▀▀▀▀▀▀▀▀▄▄░░░░░"
+  echo -e "░░░░█░░░░░░░░░░░░░█░░░░"
+  echo -e "░░░█░░░░░░░░░░${RED}▄▄▄${NC}░░█░░░"
+  echo -e "░░░█░░${RED}▄▄▄${NC}░░▄░░${RED}███${NC}░░█░░░"
+  echo -e "░░░▄█░▄░░░▀▀▀░░░▄░█▄░░░"
+  echo -e "░░░█░░▀█▀█▀█▀█▀█▀░░█░░░"
+  echo -e "░░░▄██▄▄▀▀▀▀▀▀▀▄▄██▄░░░"
+  echo -e "░▄█░█▀▀█▀▀▀█▀▀▀█▀▀█░█▄░"
+  echo -e "▄▀░▄▄▀▄▄▀▀▀▄▀▀▀▄▄▀▄▄░▀▄"
+  echo -e "█░░░░▀▄░█▄░░░▄█░▄▀░░░░█"
+  echo -e "░▀▄▄░█░░█▄▄▄▄▄█░░█░▄▄▀░"
+  echo -e "░░░▀██▄▄███████▄▄██▀░░░"
+  echo -e "░░░████████▀████████░░░"
+  echo -e "░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░░"
+  echo -e "░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░"
+  sleep 0.3s
+  clear
+ j=$(( $i + 1 ))
+ done 
+
 sleep 3s
 clear
 echo -e "#################################"
@@ -33,6 +47,9 @@ echo -e "### DAPS MASTERNODE EASY WAY ####"
 echo -e "########## By KINGer-C ##########"
 echo -e "#################################"
 sleep 2s
+clear
+echo -e "If you like my work consider to donate!!!"
+sleep 10s
 clear
 echo -e "####### DAPS - PRIVACITY MATTERS #######"
 echo -e "${PURPLE}"
@@ -82,7 +99,7 @@ do
   echo -e "# 1 - Install the IPV6 DAPSMN_XX              # M1 - Manage the IPV6 Node         #"
   echo -e "# u - update and upgrade ( recomended once)   # s8 - swap 8Gb memory              #"
   echo -e "# s10 - Swap 10Gb memory                      # s12 - Swap 12gb memory            #"
-  echo -e "# h - HTOP (Memory status- Ctrl c to exit)                                        #"
+  echo -e "# h - HTOP (Memory status- Ctrl c to exit)    # D - Open Donations file           #"
   echo -e "# i - Get ip information                      # e - exit                          #"
   echo -e "# rx -                                        # bst - boostrap                    #"
   echo -e "# up - Update the wallet to the new version                                       #"
@@ -751,11 +768,18 @@ do
      done
      watch dapscoin-cli$Number_ipv6 -rpcuser=DAPSMN$Number_ipv6 -rpcpassword=DAPSMN0$Number_ipv6 -rpcport=$((20000 + Number_ipv6)) getinfo
     fi
+  
+  elif [ $choise = "D" ]; then
+    cd ~
+    wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/donations.txt
+    nano donations.txt
 
   else
     echo -e "Command not found, please restart the instalation"
 
   fi
  cd ~
+ rm -rf donations.txt
+ wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/donations.txt
  rm -rf daps.sh
 done
