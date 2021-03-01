@@ -307,7 +307,7 @@ do
     watch dapscoin-cli$Number_ipv6 -rpcuser=DAPSMN$Number_ipv6 -rpcpassword=DAPSMN0$Number_ipv6 -rpcport=$((20000 + Number_ipv6)) getinfo
     
 
-  elif [ $choise = 'PRE']; then
+  elif [ $choise = 'PRE' ]; then
     echo -e " ${GREEN} Updating VPS ${NC}"
     sudo apt-get update
     echo -e " ${wHITE} DONE! ${NC}"
