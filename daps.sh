@@ -752,9 +752,9 @@ do
       watch dapscoin-cli$Number_ipv6 -rpcuser=DAPSMN$Number_ipv6 -rpcpassword=DAPSMN0$Number_ipv6 -rpcport=$((20000 + Number_ipv6)) getinfo
     
   else
-  echo -e "Command not found, please restart the instalation"
+   echo -e "Command not found, please restart the instalation"
  
-fi
-cd ~
-rm -rf daps.sh
+  fi
+ cd ~
+ rm -rf daps.sh
 done
