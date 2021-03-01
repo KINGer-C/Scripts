@@ -755,6 +755,6 @@ do
    echo -e "Command not found, please restart the instalation"
  
   fi
- cd ~
- rm -rf daps.sh
+cd ~
+rm -rf daps.sh
 done
