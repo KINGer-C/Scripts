@@ -307,7 +307,7 @@ do
     watch dapscoin-cli$Number_ipv6 -rpcuser=DAPSMN$Number_ipv6 -rpcpassword=DAPSMN0$Number_ipv6 -rpcport=$((20000 + Number_ipv6)) getinfo
     
 
-  elif [$choise = 'PRE']; then
+  elif [ $choise = 'PRE']; then
     echo -e " ${GREEN} Updating VPS ${NC}"
     sudo apt-get update
     echo -e " ${wHITE} DONE! ${NC}"
@@ -386,7 +386,7 @@ do
      fi
     done 
     
-    if [ $nodes == 0 ]; then
+    if [ $nodes = 0 ]; then
       dapscoin-cli stop 
       sleep 10s
       cd /usr/local/bin
@@ -749,12 +749,13 @@ do
        sleep 0.1
        ProgressBar ${number} ${_end}
      done
-      watch dapscoin-cli$Number_ipv6 -rpcuser=DAPSMN$Number_ipv6 -rpcpassword=DAPSMN0$Number_ipv6 -rpcport=$((20000 + Number_ipv6)) getinfo
-    
+     watch dapscoin-cli$Number_ipv6 -rpcuser=DAPSMN$Number_ipv6 -rpcpassword=DAPSMN0$Number_ipv6 -rpcport=$((20000 + Number_ipv6)) getinfo
+    fi
+
   else
-   echo -e "Command not found, please restart the instalation"
- 
+    echo -e "Command not found, please restart the instalation"
+
   fi
-cd ~
-rm -rf daps.sh
+ cd ~
+ rm -rf daps.sh
 done
