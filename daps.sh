@@ -31,7 +31,7 @@ while [ $k -le 5 ]
   echo -e "░░░████████▀████████░░░"
   echo -e "░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░░"
   echo -e "░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░"
-  sleep 0.5
+  sleep 0.3
   echo ""
   clear
   echo -e "░░░░░▄▄▀▀▀▀▀▀▀▀▀▄▄░░░░░"
@@ -49,7 +49,7 @@ while [ $k -le 5 ]
   echo -e "░░░████████▀████████░░░"
   echo -e "░░▄▄█▀▀▀▀█░░░█▀▀▀▀█▄▄░░"
   echo -e "░░▀▄▄▄▄▄▀▀░░░▀▀▄▄▄▄▄▀░"
-  sleep 0.5
+  sleep 0.3
 
   clear
  k=$(( $k + 1 ))
@@ -146,9 +146,9 @@ do
   echo -e "###################################################################################"
   echo -e "#                                WHAT DO YOU WANNA DO?                            #"
   echo -e "###################################################################################"
-  echo -e "# ${INV} pre - INSTALL THE PRE-REQUIRED FILES MUST RUN ONCE BEFORE ANY NODE ${NC} #"
+  echo -e "#${INV}PRE - INSTALL THE PRE-REQUIRED FILES MUST RUN ONCE BEFORE ANY NODE ${NC}           #"
   echo -e "###################################################################################"
-  echo -e "# ${BLUE} THIS SCRIPT WILL ONLY WORK IF YOU ARE ROOT USER ${NC}                   #"
+  echo -e "#${BLUE} THIS SCRIPT WILL ONLY WORK IF YOU ARE ROOT USER ${NC}                            #"
   echo -e "###################################################################################"
   echo -e "# 0 - Install the IPV4 DAPSMN                 # M0 - Manage the IPV4 Node         #"
   echo -e "# 1 - Install the IPV6 DAPSMN_XX              # M1 - Manage the IPV6 Node         #"
