@@ -10,6 +10,10 @@ WHITE='\033[1;37m'
 INV='\e[7m'
 B_RED='\e[41m'
 B_WHITE='\e[107m'
+BLINK_Y='\033[33;5m'
+BLINK_R='\033[31;5m'
+BLINK_G='\033[32;5m'
+
 clear
 k=1
 while [ $k -le 5 ]
@@ -63,8 +67,10 @@ echo -e "########## By KINGer-C ##########"
 echo -e "#################################"
 sleep 2s
 clear
-echo -e "If you like my work. Please consider to donate!!!"
-sleep 10s
+echo ""
+echo -e " ${BLINK_G} If you like my work. Please consider to donate!!!${NC}"
+echo ""
+sleep 6s
 clear
 k=1
 while [ $k -le 5 ]
@@ -142,44 +148,77 @@ DAPS_BOOTSTRAP=https://bootstrap.dapscoin.com/bootstrap.zip
 while :
 do
   echo -e "###################################################################################"
-  ls -a
+  ls -al
   echo -e "###################################################################################"
   echo -e "#                                WHAT DO YOU WANNA DO?                            #"
   echo -e "###################################################################################"
-  echo -e "#${INV}PRE - INSTALL THE PRE-REQUIRED FILES MUST RUN ONCE BEFORE ANY NODE ${NC}           #"
+  echo -e "#${BLINK_R}     PRE - INSTALL THE PRE-REQUIRED FILES MUST RUN ONCE BEFORE THE 1st NODE ${NC}     #"
   echo -e "###################################################################################"
-  echo -e "#${BLUE} THIS SCRIPT WILL ONLY WORK IF YOU ARE ROOT USER ${NC}                            #"
-  echo -e "###################################################################################"
+  echo -e "#${RED}               THIS SCRIPT WILL ONLY WORK IF YOU ARE ROOT USER ${NC}                  #"
+  echo -e "###################################################################################" 
+  echo -e "#${RED}     PRE - INSTALL THE PRE-REQUIRED FILES MUST RUN ONCE BEFORE THE 1st NODE ${NC}     #"
   echo -e "# 0 - Install the IPV4 DAPSMN                 # M0 - Manage the IPV4 Node         #"
   echo -e "# 1 - Install the IPV6 DAPSMN_XX              # M1 - Manage the IPV6 Node         #"
-  echo -e "# u - update and upgrade ( recomended once)   # s8 - swap 8Gb memory              #"
-  echo -e "# s10 - Swap 10Gb memory                      # s12 - Swap 12gb memory            #"
+  echo -e "# u - update and upgrade                      # S8 - swap 8Gb memory              #"
+  echo -e "# S10 - Swap 10Gb memory                      # S12 - Swap 12Gb memory            #"
   echo -e "# h - HTOP (Memory status- Ctrl c to exit)    # D - Open Donations file           #"
-  echo -e "# i - Get ip information                      # e - exit                          #"
-  echo -e "#                                             # bst - boostrap                    #"
-  echo -e "# up - Update the wallet to the new version                                       #"
+  echo -e "# I - Get ip information                      # E - exit                          #"
+  echo -e "# BTS - boostrap                                                                  #"
+  echo -e "# UP - Update the wallet to the new version                                       #"
   echo -e "###################################################################################"
   read -p " Your choise: " choises
   choise=${choises^^}
   clear
-  if [ $choise = 0 ]; then
+  if [ $choise = '0' ]; then
     echo -e "Downloading latest build..."
     wget -N $DAPS_URL
     echo -e "Unzipping wallet..."
     sudo unzip -jo $DAPS_ZIP -d /usr/local/bin
     echo -e "Giving permissions...."
-    sudo chmod +x /usr/local/bin/daps*
+    sudo chmod 777 /usr/local/bin/daps*
     echo -e "Removing old files"
     cd ~
     rm -rf $DAPS_ZIP
-    dapscoin-cli stop
     sleep 3s
     rm -rf ~/.dapscoin/
-    echo -e "Enter your IPV4 for the DAPSMN00"
-    read -p "Your Ipv4 IP: " IP
+    c='N'
+    while [ $c != 'Y' ]
+    do
+     IP=0
+     echo -e "Enter your IPV4 for the DAPSMN0"
+     read -p "Your Ipv4 IP: " IP
+     echo ""
+     echo -e " YUOR IPV4 is = ${INV} > $IP < ${NC} ?"
+     read -p "Type : 'Y' to YES or 'N' to NO: " choise
+     c=${choise^^}
+     if [ $c != 'Y' ];then
+       echo -e " ${ORANGE}Ok, Lets Try do it Again!!!${NC}"
+       sleep 5s
+      else
+       echo -e "IPV4 sucessfully added, Continuing the instalation of DAPSMN0!"
+     fi
+    done
     echo -e ""
-    echo -e "Enter your masternode private key for node DAPSMN00"
-    read -p "Your DAPSMN00 Privkey: " PRIVKEY
+
+    c='N'
+    while [ $c != 'Y' ]
+    do
+     PRIVKEY=0
+     echo -e "Enter your masternode private key for node DAPSMN0"
+     read -p "Your DAPSMN0 Privkey is : " PRIVKEY
+     echo ""
+     echo -e " YUOR Privkey is = ${INV} > $PRIVKEY < ${NC} ?"
+     read -p "Type : 'Y' to YES or 'N' to NO: " choise
+     c=${choise^^}
+     if [ $c != 'Y' ];then
+       echo -e " ${ORANGE}Ok, Lets Try do it Again!!!${NC}"
+       sleep 5s
+      else
+       echo -e "PRIVKEY sucessfully added, Continuing the instalation of DAPSMN0!"
+     fi
+    done
+
+
     CONF_DIR=~/.dapscoin/
     CONF_FILE=dapscoin.conf
     PORT=53572
@@ -198,7 +237,7 @@ do
     sudo ufw allow ssh
     sudo ufw allow 53572
     sudo ufw allow 53573
-    sudo ufw enable
+    sudo ufw enable -y
     sleep 2s
     clear
     dapscoind -daemon
@@ -222,6 +261,8 @@ do
       ProgressBar ${number} ${_end}
     done
     printf "\n${B_WHITE}Finished!${NC}\n"
+    ech0 ""
+    echo -e "To exit to the next scream press  ${ORANGE}' Ctrl + c ' ${NC} "
     watch dapscoin-cli getinfo
 
   elif [ $choise = '1' ]; then
@@ -270,6 +311,24 @@ do
        sleep 5s
       else
        echo -e "IPV6 sucessfully added, Continuing the instalation of DAPSMN${Number_ipv6}!"
+     fi
+    done
+
+    c='N'
+    while [ $c != 'Y' ]
+    do
+     PRIVKEY=0
+     echo -e "Enter your masternode private key for node DAPSMN$Number_ipv6"
+     read -p "Your DAPSMN$Number_ipv6 Privkey is : " PRIVKEY
+     echo ""
+     echo -e " YUOR Privkey is = ${INV} > $PRIVKEY < ${NC} ?"
+     read -p "Type : 'Y' to YES or 'N' to NO: " choise
+     c=${choise^^}
+     if [ $c != 'Y' ];then
+       echo -e " ${ORANGE}Ok, Lets Try do it Again!!!${NC}"
+       sleep 5s
+      else
+       echo -e "PRIVKEY od DAPSMN$Number_ipv6 sucessfully added, Continuing the instalation of DAPSMN$Number_ipv6!"
      fi
     done
 
@@ -375,6 +434,8 @@ do
       ProgressBar ${number} ${_end}
     done
     printf "\n${INV}Finished!${NC}\n"
+    ech0 ""
+    echo -e "To exit to the next scream press  ${ORANGE}' Ctrl + c ' ${NC} "
 
     watch dapscoin-cli$Number_ipv6 -rpcuser=DAPSMN$Number_ipv6 -rpcpassword=DAPSMN0$Number_ipv6 -rpcport=$((20000 + Number_ipv6)) getinfo
     
@@ -621,17 +682,33 @@ do
     fi    
  
   elif [ $choise = 'E' ]; then
+    clear
+    echo ""
+    echo -e " ${PURPLE}Thank you for use my script, and be happy with your new nodes ${NC}"
+    clear
+    sleep 3s
+    echo " ${BLUE}Bye Bye ${NC}"
+    sleep 1s
     rm -rf daps.sh && break
 
   elif [ $choise = 'S8' ]; then
     sudo fallocate -l 8G /swapfile08 && chmod 600 /swapfile08 && mkswap /swapfile08 && swapon /swapfile08 && echo -e '/swapfile08 none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
-  
+    echo -e ""
+    echo -e "${GREEN}8GB swap Done !${NC}"
+    sleep 3s
+
   elif [ $choise = 'S10' ]; then
     sudo fallocate -l 10G /swapfile10 && chmod 600 /swapfile10 && mkswap /swapfile10 && swapon /swapfile10 && echo -e '/swapfie10 none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
-  
+    echo -e ""
+    echo -e "${GREEN}10GB swap Done !${NC}"
+    sleep 3s
+
   elif [ $choise = 'S12' ]; then
     sudo fallocate -l 12G /swapfile12 && chmod 600 /swapfile12 && mkswap /swapfile12 && swapon /swapfile12 && echo -e '/swapfile12 none swap sw 0 0' | sudo tee -a /etc/fstab && free -h
-  
+    echo -e ""
+    echo -e "${GREEN}12GB swap Done !${NC}"
+    sleep 3s
+
   elif [ $choise = 'M0' ]; then
     while :
     do
@@ -829,12 +906,24 @@ do
     wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/donations.txt
     nano donations.txt
 
+  elif [ $choise = "I" ]; then
+    cd ~
+    clear
+    ifconfig
+    sleep 10s
+
+  elif [ $choise = "U" ]; then
+    cd ~
+    clear
+    sudo apt-get update
+    sudo apt-get upgrade -y
+    echo -e "${GREEN} DONE !!! ${NC}"
+    sleep 10s
   else
     echo -e "Command not found, please restart the instalation"
 
   fi
  cd ~
- rm -rf donations.txt
- wget https://raw.githubusercontent.com/KINGer-C/Scripts/master/donations.txt
  rm -rf daps.sh
+ clear
 done
